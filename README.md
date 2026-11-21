@@ -3,7 +3,7 @@
 A free, monthly atlas of the uranium market: every reactor, every mine, the balance between them, the price,
 fund holdings, the news and the filings.
 
-**Live:** https://samiautomatic48.github.io/uranograph/
+**Live:** https://uranograph.com
 
 ## What is in here
 
