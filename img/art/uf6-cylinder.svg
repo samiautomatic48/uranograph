@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="ua-w3" d="M14 136H306"/>
+<!-- 48Y cylinder: 1.22 m diameter, 3.81 m over the skirts -->
+<path class="ua-w1" d="M98 43H30V126H98M102 43H158M162 43H218M222 43H290V126H222M102 126H158M162 126H218"/>
+<rect class="ua-w1" x="98" y="40.5" width="4" height="88"/>
+<rect class="ua-w1" x="158" y="40.5" width="4" height="88"/>
+<rect class="ua-w1" x="218" y="40.5" width="4" height="88"/>
+<!-- dished heads inside the skirts -->
+<path class="ua-w3" d="M65 43A21 41.5 0 0 0 65 126M255 43A21 41.5 0 0 1 255 126M65 43V126M255 43V126"/>
+<!-- lifting lugs, valve, plug, nameplate -->
+<path class="ua-w2" d="M96.5 40.5L98.5 34.5H101.5L103.5 40.5M216.5 40.5L218.5 34.5H221.5L223.5 40.5M268 50h6v4.5h-6M274 52.2h3.5M277.5 50.2v4"/>
+<path class="ua-w3" d="M46.5 116.5h-4v3h4"/>
+<rect class="ua-w3" x="176" y="58" width="20" height="10"/>
+<!-- cradle -->
+<path class="ua-w2" d="M78 126L75 133H95L92 126M228 126L225 133H245L242 126"/>
+<rect class="ua-w2" x="64" y="133" width="192" height="3"/>
+<!-- cut-away: solid UF6 -->
+<path class="ua-w2" d="M110 66Q116 59 126 62Q138 58 148 64L151 92Q152 108 146 116Q134 121 120 118Q109 116 108.5 104Z"/>
+<path class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" d="M111 88Q120 84 130 87Q140 83 148.5 87L149 96Q149.5 108 144.5 114Q133 118.5 121 115.5Q111.5 114 111 104Z"/>
+</g>
+</svg>

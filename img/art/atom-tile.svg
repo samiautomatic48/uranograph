@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<rect class="ua-w1" x="100" y="20" width="120" height="120" rx="7"/>
+<rect class="ua-w3" x="105" y="25" width="110" height="110" rx="4"/>
+<ellipse class="ua-w3" cx="194" cy="46" rx="13" ry="5"/>
+<ellipse class="ua-w3" cx="194" cy="46" rx="13" ry="5" transform="rotate(60 194 46)"/>
+<ellipse class="ua-w3" cx="194" cy="46" rx="13" ry="5" transform="rotate(120 194 46)"/>
+<circle class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" cx="194" cy="46" r="2.6"/>
+</g>
+</svg>

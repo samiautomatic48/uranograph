@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="ua-w3" d="M12 124H55M121 124H308"/>
+<!-- auxiliary building -->
+<path class="ua-w1" d="M55 88H30V124"/>
+<path class="ua-w3" d="M30 100H55M36 124V112H46V124"/>
+<!-- shield building in section: conical roof, cooling-water tank -->
+<path class="ua-w1" d="M55 124V46L68 34V19H108V34L121 46V124"/>
+<path class="ua-w2" d="M55 124V142H121V124M81 19V17H95V19M81 19V34M95 19V34"/>
+<path class="ua-w3" d="M68 23H81M95 23H108M71 27h5M99 28h5"/>
+<!-- steel containment vessel -->
+<path class="ua-w2" d="M58.5 128V61A29.5 16.5 0 0 1 117.5 61V128A29.5 12 0 0 1 58.5 128Z"/>
+<path class="ua-w3" d="M59.5 63H116.5M59.5 65.5H116.5M84 63v-3h8v3"/>
+<!-- operating deck, steam generators, pressuriser, reactor vessel -->
+<path class="ua-w3" d="M58.5 108H69.5M77.5 108H82M94 108H98.5M106.5 108H117.5M82 108V117M94 108V117M84.5 123H77M91.5 123H99"/>
+<path class="ua-w2" d="M70 122V102L69 99V91.5A4.5 4.5 0 0 1 78 91.5V99L77 102V122A3.5 3.5 0 0 1 70 122ZM99 122V102L98 99V91.5A4.5 4.5 0 0 1 107 91.5V99L106 102V122A3.5 3.5 0 0 1 99 122Z"/>
+<path class="ua-w3" d="M110 94A1.75 1.75 0 0 1 113.5 94V104A1.75 1.75 0 0 1 110 104Z"/>
+<path class="ua-w2" d="M84.5 120A3.5 3.5 0 0 1 91.5 120V131A3.5 3.5 0 0 1 84.5 131Z"/>
+<rect class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" x="85.6" y="123.5" width="4.8" height="8" rx="1"/>
+<!-- annex and turbine building -->
+<path class="ua-w1" d="M121 96H140V124M140 124V63L143 61H287L290 63V124"/>
+<path class="ua-w3" d="M140 76H290M165 76V124M190 76V124M215 76V124M240 76V124M265 76V124"/>
+<path class="ua-w2" d="M168 61v-4h9v4M203 61v-4h9v4M238 61v-4h9v4"/>
+<rect class="ua-w3" x="270" y="106" width="14" height="18"/>
+<!-- transformer -->
+<rect class="ua-w2" x="294" y="113" width="11" height="11"/>
+<path class="ua-w3" d="M296.5 113v-5M299.5 113v-5M302.5 113v-5"/>
+</g>
+</svg>

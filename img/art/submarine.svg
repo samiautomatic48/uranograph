@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="ua-w3" d="M8 118H312"/>
+<!-- pressure hull, 115 m: above the waterline -->
+<path class="ua-w1" d="M66.8 118C79 116.3 91.5 115 104 115H282A25 13 0 0 1 298 118"/>
+<!-- below the waterline -->
+<path class="ua-w2" d="M298 118A25 13 0 0 1 307 128A25 13 0 0 1 282 141H104C76 141 48 134.5 24 131.5M66.8 118C51.8 120.1 37.3 122.8 24 124.5"/>
+<path class="ua-w3" d="M286 115.4Q291 128 286 140.6"/>
+<!-- sail and masts -->
+<path class="ua-w1" d="M233 115Q228.5 113.5 227.5 108L227 103.5Q227 102 225.5 102H209.5Q208 102 207.8 103.5L206.5 115"/>
+<path class="ua-w2" d="M221.5 102V90M212.5 102V97"/>
+<path class="ua-w3" d="M216.5 102V94M220 90h3M246 115v-1.2h5v1.2M172 115v-1.2h5v1.2"/>
+<!-- rudders, stern planes, shrouded propulsor -->
+<path class="ua-w1" d="M50.6 118L47 110H38L37.1 118"/>
+<path class="ua-w2" d="M50.6 118L51.6 120.3M37.1 118L36.6 122.7M51.6 135.7L47 146H38L36.6 133.3M33 128H55"/>
+<path class="ua-w2" d="M27 122.6L14 124.5V131.5L27 133.4Z"/>
+<!-- reactor compartment -->
+<path class="ua-w3" d="M128 115.3V140.7M150 115.3V140.7"/>
+<rect class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" x="131.5" y="121" width="15" height="16" rx="2"/>
+</g>
+</svg>

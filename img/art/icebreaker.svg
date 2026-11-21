@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<!-- open channel astern, hull waterline, ice sheet ahead -->
+<path class="ua-w3" d="M6 118H292M293.5 116H314M296 121H314M301.5 116L300 121M308.5 116L309.5 121M15 112.5H295.5"/>
+<path class="ua-w3" d="M262 117.5l6-1.5 6 1.5-3 3h-7zM226 117l5-1 7 2-4 2.5h-6zM188 118l4-2h7l3 2.5-5 2h-6zM92 117.5l6-1.5 5 1.5-2 3h-7zM52 118l5-2 6 1.5-3 3h-6z"/>
+<!-- hull, 173 m: above the waterline -->
+<path class="ua-w1" d="M17 118L13.5 109V104H120M226 99.5H295L306 96.5L292 118"/>
+<!-- below the waterline: icebreaking forefoot, rudder, propeller -->
+<path class="ua-w2" d="M17 118Q18 131 36 136H250Q276 135.5 292 118"/>
+<path class="ua-w3" d="M27 124.5V134.5H33V128"/>
+<ellipse class="ua-w3" cx="37" cy="131.5" rx="1.2" ry="3.5"/>
+<!-- superstructure and wheelhouse -->
+<path class="ua-w1" d="M120 104V84H146V74H184V64H228V72H224V80H226V99.5"/>
+<path class="ua-w3" d="M146 81H224M184 72H224M120 90H226M120 96.5H226"/>
+<rect class="ua-w3" x="190.5" y="66" width="36" height="3"/>
+<rect class="ua-w2" x="168" y="84" width="13" height="3.5" rx="1.7"/>
+<rect class="ua-w2" x="130" y="91.5" width="13" height="3.5" rx="1.7"/>
+<!-- masts, satcom dome -->
+<path class="ua-w2" d="M203 64L205.5 49.5M211 64L208.5 49.5M205.5 49.5H208.5M199 54H215M200.5 58.5H213.5"/>
+<rect class="ua-w2" x="155" y="65" width="12" height="9"/>
+<path class="ua-w3" d="M161 65V56M157.5 59h7"/>
+<circle class="ua-w2" cx="175.5" cy="70.6" r="3.2"/>
+<!-- deck crane, helideck, bow gear -->
+<path class="ua-w2" d="M104 104V93.5M101 93.5h6v-4h-6zM104 89.5L80 87M22 99.5H60M26 99.5V104M56 99.5V104"/>
+<path class="ua-w3" d="M22 99.5l-3 1.5M60 99.5l3 1.5M303.5 97V90.5M262 99.5v-2.5h7v2.5"/>
+<circle class="ua-w3" cx="285" cy="106.5" r="1.8"/>
+<!-- reactor compartment: two RITM-200 -->
+<rect class="ua-w3" x="158" y="104.5" width="28" height="27.5"/>
+<path class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" d="M164.5 111h2a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2zM177.5 111h2a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2z"/>
+</g>
+</svg>

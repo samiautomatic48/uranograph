@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<g transform="translate(240 80) rotate(14)">
+<!-- magnetometer boom, 13 m -->
+<g transform="translate(-15 -2) rotate(176)">
+<path class="ua-w3" d="M0 -1.5H213M0 1.5H213M15 -1.5v3M30 -1.5v3M45 -1.5v3M60 -1.5v3M75 -1.5v3M90 -1.5v3M105 -1.5v3M120 -1.5v3M135 -1.5v3M150 -1.5v3M165 -1.5v3M180 -1.5v3M195 -1.5v3"/>
+<rect class="ua-w2" x="213" y="-2.5" width="5" height="5"/>
+<rect class="ua-w2" x="118" y="-6" width="4.5" height="4.5"/>
+<rect class="ua-w2" x="-3" y="-3" width="5" height="6"/>
+</g>
+<!-- plasma-wave whips -->
+<path class="ua-w3" d="M-5 6L-35 62M5 6L33 62"/>
+<!-- 3.7 m high-gain dish -->
+<path class="ua-w1" d="M-30 -22Q0 0 30 -22Z"/>
+<path class="ua-w2" d="M-4.5 -32.5H4.5L3 -30H-3Z"/>
+<path class="ua-w3" d="M-26 -22L-3 -30.6M26 -22L3 -30.6M6 -22L1 -30"/>
+<path class="ua-w3" d="M-13 -4L-17 -14.4M13 -4L17 -14.4M-13 -4L0 -11M13 -4L0 -11"/>
+<!-- ten-sided bus -->
+<rect class="ua-w1" x="-15" y="-4" width="30" height="8"/>
+<path class="ua-w3" d="M-12.1 -4V4M-4.6 -4V4M4.6 -4V4M12.1 -4V4"/>
+<path class="ua-w2" d="M-6 4L-4 8H4L6 4"/>
+<!-- science boom and scan platform -->
+<path class="ua-w2" d="M15 -3L53 4M15 3L53 6.5"/>
+<path class="ua-w2" d="M26 -1v-5h5v5.9M37 1v-4.5h4.5v5.3"/>
+<rect class="ua-w2" x="53" y="0" width="10" height="10"/>
+<path class="ua-w2" d="M54.5 0v-7h3.5v7M59.5 0v-4h2.5v4"/>
+<path class="ua-w3" d="M63 2.5q4 2.5 0 6"/>
+<!-- RTG boom: three generators in line -->
+<path class="ua-w2" d="M-15 0L-33.4 16.9M-9 4L-30.4 20.7"/>
+<g transform="translate(-31.9 18.8) rotate(142)">
+<path class="ua-w3" d="M0 -3.8h9.6v7.6h-9.6zM11.1 -3.8h9.6v7.6h-9.6zM22.2 -3.8h9.6v7.6h-9.6z"/>
+<path class="ua-w2" d="M9.6 0h1.5M20.7 0h1.5"/>
+<path class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" d="M.8 -2.3h8v4.6h-8zM11.9 -2.3h8v4.6h-8zM23 -2.3h8v4.6h-8z"/>
+</g>
+</g>
+</g>
+</svg>

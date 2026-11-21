@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="ua-w3" d="M30 136H290"/>
+<!-- product, feed and tails headers -->
+<path class="ua-w2" d="M52 16H268M52 21H268M52 26H268"/>
+<!-- cascade of gas centrifuges -->
+<path class="ua-w3" d="M66 36.6V26M69 35.5V21M72 36.6V16"/>
+<path class="ua-w1" d="M64.5 130V40A4.5 4.5 0 0 1 73.5 40V130M63.5 47H74.5"/>
+<rect class="ua-w2" x="62.5" y="130" width="13" height="6"/>
+<path class="ua-w3" d="M92 36.6V26M95 35.5V21M98 36.6V16"/>
+<path class="ua-w1" d="M90.5 130V40A4.5 4.5 0 0 1 99.5 40V130M89.5 47H100.5"/>
+<rect class="ua-w2" x="88.5" y="130" width="13" height="6"/>
+<path class="ua-w3" d="M118 36.6V26M121 35.5V21M124 36.6V16"/>
+<path class="ua-w1" d="M116.5 130V40A4.5 4.5 0 0 1 125.5 40V130M115.5 47H126.5"/>
+<rect class="ua-w2" x="114.5" y="130" width="13" height="6"/>
+<path class="ua-w3" d="M144 36.6V26M147 35.5V21M150 36.6V16"/>
+<path class="ua-w1" d="M142.5 130V40A4.5 4.5 0 0 1 151.5 40V130M141.5 47H152.5"/>
+<rect class="ua-w2" x="140.5" y="130" width="13" height="6"/>
+<path class="ua-w3" d="M170 36.6V26M173 35.5V21M176 36.6V16"/>
+<path class="ua-w1" d="M168.5 130V40A4.5 4.5 0 0 1 177.5 40V130M167.5 47H178.5"/>
+<rect class="ua-w2" x="166.5" y="130" width="13" height="6"/>
+<path class="ua-w3" d="M196 36.6V26M199 35.5V21M202 36.6V16"/>
+<path class="ua-w1" d="M194.5 130V40A4.5 4.5 0 0 1 203.5 40V130M193.5 47H204.5"/>
+<rect class="ua-w2" x="192.5" y="130" width="13" height="6"/>
+<path class="ua-w3" d="M222 36.6V26M225 35.5V21M228 36.6V16"/>
+<path class="ua-w1" d="M220.5 130V40A4.5 4.5 0 0 1 229.5 40V130M219.5 47H230.5"/>
+<rect class="ua-w2" x="218.5" y="130" width="13" height="6"/>
+<path class="ua-w3" d="M248 36.6V26M251 35.5V21M254 36.6V16"/>
+<path class="ua-w1" d="M246.5 130V40A4.5 4.5 0 0 1 255.5 40V130M245.5 47H256.5"/>
+<rect class="ua-w2" x="244.5" y="130" width="13" height="6"/>
+</g>
+</svg>

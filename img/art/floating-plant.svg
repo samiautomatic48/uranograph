@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="ua-w3" d="M6 118H244M6 134H244"/>
+<!-- barge hull, 144 m -->
+<path class="ua-w1" d="M19 118L18 112H235L230 118"/>
+<path class="ua-w2" d="M19 118L22 126.5H224L230 118"/>
+<!-- accommodation block and machinery block -->
+<path class="ua-w1" d="M26 112V84H92V90H130V80H176V90H222V112"/>
+<path class="ua-w3" d="M26 91H92M26 98H92M26 105H92M92 101H222M92 90V112"/>
+<rect class="ua-w2" x="34" y="78" width="24" height="6"/>
+<path class="ua-w3" d="M46 78V66M42 70h8M196 90V72M192 76h8M193.5 80h5M226 112v-2.5h3v2.5"/>
+<rect class="ua-w2" x="112" y="70" width="6" height="20"/>
+<path class="ua-w2" d="M134 80V73H172V80M150 73v-3h6v3"/>
+<!-- reactor compartment: two KLT-40S -->
+<rect class="ua-w3" x="134" y="94" width="38" height="28"/>
+<path class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" d="M142.5 100h3a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-3a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2zM160.5 100h3a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-3a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2z"/>
+<!-- quay, gangway, mooring line -->
+<path class="ua-w1" d="M244 134V112H314"/>
+<rect class="ua-w2" x="241.5" y="113.5" width="2.5" height="6"/>
+<path class="ua-w2" d="M235 112H244M250 112v-3h3v3"/>
+<path class="ua-w3" d="M235.5 112V109.5H243.5V112M228 110Q240 116 251 109.5"/>
+<!-- switchgear house, pylon, line ashore -->
+<rect class="ua-w2" x="258" y="97" width="20" height="15"/>
+<path class="ua-w3" d="M264 97V93M272 97V93M262 93H274M268 93Q277 89 284 79M268 93Q278 94 285.5 85"/>
+<path class="ua-w2" d="M287.5 112L290.5 74M296.5 112L293.5 74M290.5 74H293.5M284 79H300M285.5 85H298.5M287 91H297"/>
+<path class="ua-w3" d="M288.3 102L295 94M295.7 102L289 94M300 79Q310 84 320 81M298.5 85Q310 90 320 87"/>
+</g>
+</svg>

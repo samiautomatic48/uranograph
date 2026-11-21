@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="ua-w3" d="M12 136H65M135 136H308"/>
+<!-- safeguard building -->
+<path class="ua-w1" d="M65 95H40V136"/>
+<path class="ua-w3" d="M40 108H65M46 136V126H54V136"/>
+<!-- reactor building in section: outer shell and prestressed inner containment -->
+<path class="ua-w1" d="M65 136V83.5A35 25 0 0 1 135 83.5V136"/>
+<path class="ua-w2" d="M68.5 136V84.5A31.5 22.5 0 0 1 131.5 84.5V136M65 136V141H135V136"/>
+<path class="ua-w3" d="M69.5 87H130.5M69.5 89.5H130.5M96 87v-3h8v3"/>
+<!-- operating floor, steam generators, pressuriser, reactor vessel, core catcher -->
+<path class="ua-w3" d="M68.5 112H82M87 112H94M106 112H113M118 112H131.5M94 112V119M106 112V119M97 123H87M103 123H113M100 132.5L104 133.5H128V130.5"/>
+<path class="ua-w2" d="M82 121V103L81 100V92A3.5 3.5 0 0 1 88 92V100L87 103V121A2.5 2.5 0 0 1 82 121ZM113 121V103L112 100V92A3.5 3.5 0 0 1 119 92V100L118 103V121A2.5 2.5 0 0 1 113 121Z"/>
+<path class="ua-w3" d="M124 95.5A1.5 1.5 0 0 1 127 95.5V106.5A1.5 1.5 0 0 1 124 106.5Z"/>
+<path class="ua-w2" d="M97 119A3 3 0 0 1 103 119V129A3 3 0 0 1 97 129Z"/>
+<rect class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" x="97.8" y="121.5" width="4.4" height="8" rx=".8"/>
+<!-- fuel building and vent stack -->
+<path class="ua-w1" d="M135 93H163V136"/>
+<path class="ua-w3" d="M135 106H163M147 40H151M147 64H151"/>
+<path class="ua-w2" d="M147 93V17H151V93M163 110H172M163 114H172"/>
+<!-- turbine hall -->
+<path class="ua-w1" d="M172 136V83L175 81H287L290 83V136"/>
+<path class="ua-w3" d="M172 95H290M196 95V136M220 95V136M244 95V136M268 95V136"/>
+<path class="ua-w2" d="M190 81v-3.5h9v3.5M226 81v-3.5h9v3.5M262 81v-3.5h9v3.5"/>
+<!-- transformer -->
+<rect class="ua-w2" x="294" y="126" width="10" height="10"/>
+<path class="ua-w3" d="M296.5 126v-4.5M299 126v-4.5M301.5 126v-4.5"/>
+</g>
+</svg>

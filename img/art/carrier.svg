@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="ua-w3" d="M6 118H314"/>
+<!-- flight deck, 337 m -->
+<path class="ua-w1" d="M12 103.5V100.5H307V103.5"/>
+<path class="ua-w3" d="M12 103.5H307"/>
+<!-- hull above the waterline -->
+<path class="ua-w1" d="M13 103.5L15 110L18 118M306 103.5Q300 108 296.5 118"/>
+<path class="ua-w2" d="M24 103.5L32 109.5H258L270 103.5"/>
+<rect class="ua-w2" x="150" y="103.5" width="24" height="6"/>
+<rect class="ua-w2" x="198" y="103.5" width="24" height="6"/>
+<path class="ua-w3" d="M15 100.5V93M19 100.5V95M302 100.5V95M36 103.5v2.5h4v-2.5M276 103.5v2.5h4v-2.5"/>
+<circle class="ua-w3" cx="298" cy="110" r="1.2"/>
+<!-- below the waterline: bulbous bow, rudder, screws -->
+<path class="ua-w2" d="M18 118Q20 127 40 128.5H282Q303 128.5 303 123Q303 119.5 296.5 118"/>
+<path class="ua-w3" d="M26 120V127.5H31.5V121M33 124.5H42"/>
+<!-- island and mast -->
+<path class="ua-w1" d="M84 100.5V85L86 82H100L102 85V100.5"/>
+<path class="ua-w3" d="M85 88.5H101M85 92.5H101M95 84h4v3h-4zM88 72H98M89.5 68H96.5M93 64V62"/>
+<path class="ua-w2" d="M92 82V64M94 82V64"/>
+<!-- aircraft on deck -->
+<path class="ua-w2" transform="translate(36 100.3)" d="M0 -2L1.5 -2.5L1 -5.6H2.4L4.5 -2.7H8L10.3 -3.5Q12 -3.4 12.6 -2.4L15 -1.5L12 -.6H.5Z"/>
+<path class="ua-w2" transform="translate(236 100.3)" d="M0 -2L1.5 -2.5L1 -5.6H2.4L4.5 -2.7H8L10.3 -3.5Q12 -3.4 12.6 -2.4L15 -1.5L12 -.6H.5Z"/>
+<path class="ua-w2" transform="translate(254 100.3)" d="M0 -2L1.5 -2.5L1 -5.6H2.4L4.5 -2.7H8L10.3 -3.5Q12 -3.4 12.6 -2.4L15 -1.5L12 -.6H.5Z"/>
+<path class="ua-w2" transform="translate(272 100.3)" d="M0 -2L1.5 -2.5L1 -5.6H2.4L4.5 -2.7H8L10.3 -3.5Q12 -3.4 12.6 -2.4L15 -1.5L12 -.6H.5Z"/>
+<!-- two A1B reactor compartments -->
+<path class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" d="M131.5 113.5h11a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1 -1.5 1.5h-11a1.5 1.5 0 0 1 -1.5 -1.5v-8a1.5 1.5 0 0 1 1.5 -1.5zM171.5 113.5h11a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1 -1.5 1.5h-11a1.5 1.5 0 0 1 -1.5 -1.5v-8a1.5 1.5 0 0 1 1.5 -1.5z"/>
+</g>
+</svg>

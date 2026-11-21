@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Uranograph</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="A monthly atlas of the uranium market: every reactor, every mine, the balance between them, the price, and the filings.">
+<meta property="og:title" content="Uranograph">
+<meta property="og:description" content="Every reactor, every mine, and the balance between them. A monthly atlas of the uranium market.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B0E0A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230B0E0A'/%3E%3Cpath d='M9 7v11a7 7 0 0 0 14 0V7' fill='none' stroke='%23FFC21A' stroke-width='3.5' stroke-linecap='square'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Doto:wght@100..900&family=Martian+Mono:wdth,wght@75..112.5,100..800&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap mast__row">
+    <a class="brand" href="#atlas">
+      <span class="brand__mark" data-brand>Uranograph</span>
+      <span class="brand__issue label" data-issue></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#atlas">Atlas</a>
+      <a href="#balance">Balance</a>
+      <a href="#reactors">Reactors</a>
+      <a href="#mines">Mines</a>
+      <a href="#price">Price</a>
+      <a href="#buyers">Buyers</a>
+      <a href="#wire">Wire</a>
+      <a href="#scale">Scale</a>
+      <a href="#sources">Sources</a>
+    </nav>
+    <div class="mast__tools">
+      <div class="seg" role="group" aria-label="Uranium unit">
+        <button type="button" id="unit-lb" data-unit="lb" aria-pressed="true" title="Million pounds of U3O8">Mlb U₃O₈</button>
+        <button type="button" id="unit-tu" data-unit="tU" aria-pressed="false" title="Tonnes of uranium metal">tU</button>
+      </div>
+      <button class="btn" type="button" id="theme-toggle" aria-label="Switch between light and dark">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- FIG. 01 · the globe -->
+<section class="plate" id="atlas" aria-labelledby="atlas-h">
+  <div class="wrap plate__grid">
+    <div class="plate__intro">
+      <h1 id="atlas-h" data-in style="--i:0">Where uranium is mined, and where it is burned.</h1>
+      <p class="lede" data-in style="--i:1">
+        <i><span class="key" style="--c:var(--glow-demand)"></span>Blue</i> spikes are power stations, sized by the uranium they need each year.
+        <i><span class="key" style="--c:var(--glow-supply)"></span>Amber</i> spikes are mines, sized by what they ship.
+        Drag the globe. Drag the year.
+      </p>
+    </div>
+
+    <div class="globe" id="globe" data-in style="--i:2" role="application" aria-label="Globe of reactors and uranium mines. Drag to rotate; use the table below for the same data.">
+      <canvas id="globe-canvas"></canvas>
+      <span class="globe__hint label">Drag to turn</span>
+      <div class="pin" id="globe-pin" hidden></div>
+    </div>
+
+    <div class="readout" data-in style="--i:3" aria-live="polite">
+      <div class="year"><span id="ro-year">2026</span><span class="year__tag label" id="ro-tag">Today</span></div>
+      <div class="ro">
+        <span class="ro__k"><span class="key" style="--c:var(--glow-demand)"></span>Reactors need</span>
+        <span class="ro__v" id="ro-demand">–</span>
+        <span class="ro__n" id="ro-demand-n">–</span>
+      </div>
+      <div class="ro">
+        <span class="ro__k"><span class="key" style="--c:var(--glow-supply)"></span>Mines produce</span>
+        <span class="ro__v" id="ro-supply">–</span>
+        <span class="ro__n" id="ro-supply-n">–</span>
+      </div>
+      <div class="cover">
+        <div class="cover__txt"><span>Mines cover</span><b id="ro-cover">–</b></div>
+        <div class="cover__bar" aria-hidden="true"><div class="cover__fill" id="ro-cover-bar"></div></div>
+      </div>
+    </div>
+
+    <div class="scrub" data-in style="--i:4">
+      <button class="scrub__play" type="button" id="scrub-play" aria-label="Play through the years" aria-pressed="false">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path id="scrub-play-icon" d="M4 2.5v11l9-5.5z"/></svg>
+      </button>
+      <div class="scrub__track">
+        <div class="spark" aria-hidden="true"><canvas id="spark-canvas"></canvas></div>
+        <label class="vh" for="scrub-year">Year</label>
+        <input type="range" id="scrub-year" min="1956" max="2040" step="1" value="2026">
+        <div class="scrub__ticks" id="scrub-ticks" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <div class="plate__foot">
+      <div class="legend" id="globe-legend">
+        <span class="legend__item"><span class="sw sw--line" style="--c:var(--glow-demand)"></span>Operating reactor site</span>
+        <span class="legend__item"><span class="sw sw--dash" style="--c:var(--glow-demand)"></span>Under construction or planned</span>
+        <span class="legend__item"><span class="sw sw--line" style="--c:var(--glow-supply)"></span>Mine</span>
+        <span class="legend__item label" id="globe-scale-note">Spike height ∝ √ uranium per year</span>
+      </div>
+      <div class="control">
+        <div class="seg" role="group" aria-label="Turn the globe to a region" id="globe-regions">
+          <button type="button" data-lon="-95" data-lat="38" aria-pressed="false">Americas</button>
+          <button type="button" data-lon="12" data-lat="46" aria-pressed="false">Europe</button>
+          <button type="button" data-lon="20" data-lat="-8" aria-pressed="false">Africa</button>
+          <button type="button" data-lon="72" data-lat="42" aria-pressed="false">Central Asia</button>
+          <button type="button" data-lon="118" data-lat="32" aria-pressed="false">East Asia</button>
+          <button type="button" data-lon="134" data-lat="-26" aria-pressed="false">Australia</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="titleblock" id="tb-atlas"></div>
+  </div>
+</section>
+
+<!-- mined here, used there -->
+<section class="sec" id="split" aria-labelledby="split-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="split-h">Mined here, used there.</h2>
+      <p class="lede">Most uranium comes out of the ground in countries that use little of it. Switch the view to count each mine under the home region of its owners.</p>
+    </div>
+    <div class="stats" id="split-stats"></div>
+    <div class="controls" id="split-controls"></div>
+    <figure class="fig">
+      <div class="legend" id="split-legend"></div>
+      <div class="fig__body" id="split-chart"></div>
+      <div class="fig__tools"><button class="btn" type="button" data-table="split-table" aria-expanded="false">Show table</button></div>
+      <div class="tableview" id="split-table" hidden></div>
+      <div class="titleblock" id="tb-split"></div>
+    </figure>
+  </div>
+</section>
+
+<!-- FIG. 02 · balance -->
+<section class="sec" id="balance" aria-labelledby="balance-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="balance-h">Do the mines cover the reactors?</h2>
+      <p class="lede">Columns are mine output, added up mine by mine and project by project. The line is what reactors need. Change an assumption and the gap moves.</p>
+    </div>
+    <div class="stats" id="balance-stats"></div>
+    <div class="controls" id="balance-controls"></div>
+    <figure class="fig">
+      <div class="legend" id="balance-legend"></div>
+      <div class="fig__body" id="balance-chart"></div>
+      <div class="fig__tools"><button class="btn" type="button" data-table="balance-table" aria-expanded="false">Show table</button></div>
+      <div class="tableview" id="balance-table" hidden></div>
+      <div class="titleblock" id="tb-balance"></div>
+    </figure>
+  </div>
+</section>
+
+<!-- FIG. 03–04 · reactors -->
+<section class="sec" id="reactors" aria-labelledby="reactors-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="reactors-h">The fleet, one square per reactor.</h2>
+      <p class="lede">Solid squares are running. Hatched ones are being built. Outlines are planned with a named site. Each new unit adds a first core, then a reload every year or two for sixty years.</p>
+    </div>
+    <div class="stats" id="fleet-stats"></div>
+    <div class="controls" id="fleet-controls"></div>
+    <figure class="fig">
+      <div class="legend" id="fleet-legend"></div>
+      <div class="fig__body lattice" id="fleet-lattice"></div>
+      <div class="fig__tools"><button class="btn" type="button" data-table="fleet-table" aria-expanded="false">Show table</button></div>
+      <div class="tableview" id="fleet-table" hidden></div>
+      <div class="titleblock" id="tb-fleet"></div>
+    </figure>
+
+    <div class="sub-head">
+      <h3>When the new demand arrives</h3>
+      <p>Reactors under construction and planned, by the year they are due on the grid. One dot per unit.</p>
+    </div>
+    <figure class="fig">
+      <div class="legend" id="pipeline-legend"></div>
+      <div class="fig__body" id="pipeline-chart"></div>
+      <div class="fig__tools"><button class="btn" type="button" data-table="pipeline-table" aria-expanded="false">Show table</button></div>
+      <div class="tableview" id="pipeline-table" hidden></div>
+      <div class="titleblock" id="tb-pipeline"></div>
+    </figure>
+  </div>
+</section>
+
+<!-- FIG. 05–07 · mines -->
+<section class="sec" id="mines" aria-labelledby="mines-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="mines-h">A handful of mines carry the market.</h2>
+      <p class="lede">Uranium supply is concentrated in a few deposits and a few companies. Bars show what each mine produced. The tick marks what it is licensed or built to produce.</p>
+    </div>
+    <div class="stats" id="mines-stats"></div>
+    <figure class="fig">
+      <div class="fig__body" id="country-bar"></div>
+      <div class="titleblock" id="tb-country"></div>
+    </figure>
+
+    <div class="sub-head">
+      <h3>The largest mines</h3>
+      <div class="controls" id="mines-controls" style="margin:0"></div>
+    </div>
+    <figure class="fig">
+      <div class="fig__body" id="mines-chart"></div>
+      <div class="fig__tools"><button class="btn" type="button" data-table="mines-table" aria-expanded="false">Show table</button></div>
+      <div class="tableview" id="mines-table" hidden></div>
+      <div class="titleblock" id="tb-mines"></div>
+    </figure>
+
+    <div class="sub-head">
+      <h3>Built to produce, and what came out</h3>
+      <p>Each bar is a mine's output as a share of the capacity it is licensed or built for. Outlined bars are mines still ramping up.</p>
+    </div>
+    <figure class="fig">
+      <div class="legend" id="nameplate-legend"></div>
+      <div class="fig__body" id="nameplate-chart"></div>
+      <p class="note" id="nameplate-note"></p>
+      <div class="fig__tools"><button class="btn" type="button" data-table="nameplate-table" aria-expanded="false">Show table</button></div>
+      <div class="tableview" id="nameplate-table" hidden></div>
+      <div class="titleblock" id="tb-nameplate"></div>
+    </figure>
+
+    <div class="sub-head">
+      <h3>When the new supply arrives</h3>
+      <p>Restarts and new mines. The bar spans the earliest and latest credible first year of production. The dot is the owner's own date. Mines already producing and still climbing sit at the left.</p>
+    </div>
+    <figure class="fig">
+      <div class="legend" id="projects-legend"></div>
+      <div class="fig__body" id="projects-chart"></div>
+      <div class="fig__tools"><button class="btn" type="button" data-table="projects-table" aria-expanded="false">Show table</button></div>
+      <div class="tableview" id="projects-table" hidden></div>
+      <div class="titleblock" id="tb-projects"></div>
+    </figure>
+
+    <div id="cost-block" hidden>
+      <div class="sub-head">
+        <h3>What a pound costs to mine</h3>
+        <p>Each block is a mine. Its width is annual output, its height the cost the owner reports. Where the line of reactor need crosses the blocks is the cost of the last pound required.</p>
+      </div>
+      <figure class="fig">
+        <div class="controls" id="cost-controls"></div>
+        <div class="legend" id="cost-legend"></div>
+        <div class="fig__body" id="cost-chart"></div>
+        <p class="note" id="cost-note"></p>
+        <div class="fig__tools"><button class="btn" type="button" data-table="cost-table" aria-expanded="false">Show table</button></div>
+        <div class="tableview" id="cost-table" hidden></div>
+        <div class="titleblock" id="tb-cost"></div>
+      </figure>
+    </div>
+
+    <div id="costs-block" hidden>
+      <div class="sub-head">
+        <h3>The cost of a pound, year by year</h3>
+        <p>What the two largest listed producers report it costs them to mine a pound, in their own measures. The bracket at the end is each company's guidance for the current year.</p>
+      </div>
+      <figure class="fig">
+        <div class="legend" id="costs-legend"></div>
+        <div class="fig__body" id="costs-chart"></div>
+        <p class="note" id="costs-note"></p>
+        <div class="fig__tools"><button class="btn" type="button" data-table="costs-table" aria-expanded="false">Show table</button></div>
+        <div class="tableview" id="costs-table" hidden></div>
+        <div class="titleblock" id="tb-costs"></div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- FIG. 08 · price -->
+<section class="sec" id="price" aria-labelledby="price-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="price-h">The price of a pound.</h2>
+      <p class="lede">Spot is what a pound of U₃O₈ costs for delivery now. Term is the base price utilities sign for deliveries years out. The marks along the bottom of the chart are the events that moved the market.</p>
+    </div>
+    <div class="stats" id="price-stats"></div>
+    <div class="controls" id="price-controls"></div>
+    <figure class="fig">
+      <div class="legend" id="price-legend"></div>
+      <div class="fig__body" id="price-chart"></div>
+      <div class="fig__tools"><button class="btn" type="button" data-table="price-table" aria-expanded="false">Show table</button></div>
+      <div class="tableview" id="price-table" hidden></div>
+      <div class="titleblock" id="tb-price"></div>
+    </figure>
+    <div id="services-block" hidden>
+      <div class="sub-head">
+        <h3>Converting and enriching it</h3>
+        <p>Uranium is the product. Turning it into gas and enriching it are services, priced separately. All three have repriced since their lows.</p>
+      </div>
+      <figure class="fig">
+        <div class="fig__body" id="services-chart"></div>
+        <p class="note" id="services-note"></p>
+        <div class="titleblock" id="tb-services"></div>
+      </figure>
+    </div>
+    <div id="market-extra"></div>
+  </div>
+</section>
+
+<!-- buyers: contracts, inventories, origins -->
+<section class="sec" id="buyers" aria-labelledby="buyers-h" hidden>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="buyers-h">What utilities still have to buy.</h2>
+      <p class="lede">Reactor operators buy most of their uranium years ahead, under long contracts. The United States publishes how much its operators have locked in, how much is still open, what sits in inventory and where it was mined.</p>
+    </div>
+    <div id="buyers-extra"></div>
+  </div>
+</section>
+
+<!-- wire -->
+<section class="sec" id="wire" aria-labelledby="wire-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="wire-h">What changed this month.</h2>
+      <p class="lede">The news that moved supply or demand, and what listed companies filed with regulators. Headlines link to the original. The one-line notes are ours.</p>
+    </div>
+    <div class="wire">
+      <div>
+        <h3>News</h3>
+        <div class="controls" id="news-controls"></div>
+        <div class="news" id="news-list"></div>
+        <div class="more"><button class="btn" type="button" id="news-more">Show more</button></div>
+      </div>
+      <div>
+        <h3>Filings</h3>
+        <div class="controls" id="filings-controls"></div>
+        <div class="filings" id="filings-list"></div>
+        <div class="more"><button class="btn" type="button" id="filings-more">Show more</button></div>
+      </div>
+    </div>
+    <div id="companies-block" hidden>
+      <div class="sub-head">
+        <h3>Who is listed</h3>
+        <p>The public companies along the chain, from the mine to the reactor, with where each one files.</p>
+      </div>
+      <div class="controls" id="companies-controls"></div>
+      <div class="tableview" id="companies-table" style="max-height:520px;margin-top:0"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FIG. 09 · scale -->
+<section class="sec" id="scale" aria-labelledby="scale-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="scale-h">How big is nuclear power?</h2>
+      <p class="lede">From a battery that trickles microwatts for decades to a station that lights a region, on one logarithmic ruler. The amber part of each drawing is where the heat is made.</p>
+    </div>
+    <figure class="fig ladder">
+      <div class="ladder__scroll" id="ladder-scroll" tabindex="0" aria-label="Scale of nuclear power sources, scrolls sideways">
+        <div class="ladder__rail" id="ladder-rail"></div>
+      </div>
+      <div class="fig__tools"><button class="btn" type="button" data-table="scale-table" aria-expanded="false">Show table</button></div>
+      <div class="tableview" id="scale-table" hidden></div>
+      <div class="titleblock" id="tb-scale"></div>
+    </figure>
+  </div>
+</section>
+
+<!-- facts -->
+<section class="sec" id="facts" aria-labelledby="facts-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="facts-h">One reactor, one year.</h2>
+      <p class="lede">What it takes to run a large reactor for twelve months, from the ore body to the grid. Below that, the figures people quote, each checked against its source.</p>
+    </div>
+    <figure class="fig" id="flow-fig" hidden>
+      <div class="flow" id="flow-steps"></div>
+      <div class="flow-split" id="flow-split"></div>
+      <div class="titleblock" id="tb-flow"></div>
+    </figure>
+    <div class="sub-head"><h3>Uranium in numbers</h3></div>
+    <div class="feat" id="facts-feat" hidden></div>
+    <div class="controls" id="facts-controls"></div>
+    <div class="facts" id="facts-grid"></div>
+  </div>
+</section>
+
+<!-- sources -->
+<section class="sec" id="sources" aria-labelledby="sources-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="sources-h">Sources and method.</h2>
+      <p class="lede">Every figure on this page comes from a public source. Where a number is modelled, the model is written down here.</p>
+    </div>
+    <div class="sources">
+      <div class="method" id="method"></div>
+      <div>
+        <div class="controls" id="sources-controls"></div>
+        <div class="tableview" id="sources-table" style="max-height:560px;margin-top:0"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap foot">
+  <div>
+    <span class="brand__mark" data-brand>Uranograph</span>
+    <p class="label" data-issue-long style="margin-top:8px"></p>
+  </div>
+  <div>
+    <p>A free, independent atlas of the uranium market, redrawn every month. It reports data and shows its sources. It is not investment advice and makes no price forecast.</p>
+  </div>
+</footer>
+
+<div class="tip" id="tip" role="status" aria-live="off"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script src="js/00-core.js"></script>
+<script src="js/05-art.js"></script>
+<script src="js/10-globe.js"></script>
+<script src="js/15-split.js"></script>
+<script src="js/20-balance.js"></script>
+<script src="js/30-fleet.js"></script>
+<script src="js/40-mines.js"></script>
+<script src="js/50-price.js"></script>
+<script src="js/55-market.js"></script>
+<script src="js/60-wire.js"></script>
+<script src="js/70-scale.js"></script>
+<script src="js/80-sources.js"></script>
+<script src="js/99-boot.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="ua-w2" d="M10 136H310"/>
+<path class="ua-w3" d="M10 138.5H310"/>
+<!-- trucks -->
+<circle class="ua-w1" cx="45.5" cy="128.5" r="7.5"/>
+<circle class="ua-w1" cx="74.5" cy="128.5" r="7.5"/>
+<circle class="ua-w1" cx="245.5" cy="128.5" r="7.5"/>
+<circle class="ua-w1" cx="274.5" cy="128.5" r="7.5"/>
+<circle class="ua-w2" cx="45.5" cy="128.5" r="2"/>
+<circle class="ua-w2" cx="74.5" cy="128.5" r="2"/>
+<circle class="ua-w2" cx="245.5" cy="128.5" r="2"/>
+<circle class="ua-w2" cx="274.5" cy="128.5" r="2"/>
+<path class="ua-w2" d="M47.5 128L52.5 122.5H67.5L72.5 128L67.5 131.5H52.5ZM247.5 128L252.5 122.5H267.5L272.5 128L267.5 131.5H252.5Z"/>
+<path class="ua-w3" d="M56.5 124.5h7v5h-7zM256.5 124.5h7v5h-7zM60 119v3.5M260 119v3.5"/>
+<!-- end sills, couplers, brake wheel -->
+<path class="ua-w2" d="M30 116V123M30 119H70M290 116V123M250 119H290M30 121.5H24M21.5 119.5h2.5v4h-2.5zM290 121.5H296M296 119.5h2.5v4h-2.5zM48 119V107.5M272 119V107.5"/>
+<path class="ua-w3" d="M33.5 119V108M279 78h5M279 84h5M279 90h5"/>
+<circle class="ua-w3" cx="33.5" cy="105.5" r="2.5"/>
+<!-- hopper body, 16 m over couplers -->
+<path class="ua-w1" d="M36 98V72H284V98L250 119H70Z"/>
+<path class="ua-w3" d="M36 75H284M52 75V107.9M68 75V117.8M84 75V119M100 75V119M116 75V119M132 75V119M148 75V119M164 75V119M180 75V119M196 75V119M212 75V119M228 75V119M244 75V119M252 75V117.8M268 75V107.9"/>
+<!-- discharge bays -->
+<path class="ua-w2" d="M84 119L98 129H112L126 119M133 119L147 129H161L175 119M182 119L196 129H210L224 119"/>
+<!-- heaped coal -->
+<path class="ua-w2" d="M40 72Q52 62 70 65Q86 60 104 64Q122 59 142 63Q160 58 180 63Q198 59 216 64Q234 60 250 65Q268 63 280 72"/>
+<path class="ua-w3" d="M60 68.5q3-2 6 0M118 66.5q3-2 6 0M172 65.5q3-2 6 0M228 67q3-2 6 0M90 69q2.5-1.5 5 0M200 69q2.5-1.5 5 0"/>
+</g>
+</svg>

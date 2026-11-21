@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="ua-w3" d="M56 136H264M126 136Q138 135 141 129Q144 124.5 148 124M194 136Q182 135 179 129Q176 124.5 172 124"/>
+<!-- umbrella radiator -->
+<path class="ua-w1" d="M102 44L160 28L218 44Z"/>
+<path class="ua-w3" d="M160 28L109.8 44M160 28L131 44M160 28V44M160 28L189 44M160 28L210.2 44"/>
+<path class="ua-w3" d="M160 58L124 44M160 58L196 44M131 36H189M179 84Q186.5 85 186.5 94V131Q186.5 136 192 136"/>
+<path class="ua-w2" d="M158.5 44V62M161.5 44V62"/>
+<!-- Stirling converters -->
+<path class="ua-w2" d="M141 62H179M141 84H179"/>
+<rect class="ua-w2" x="143.5" y="64" width="5" height="18" rx="1.5"/>
+<rect class="ua-w2" x="151" y="64" width="5" height="18" rx="1.5"/>
+<rect class="ua-w2" x="164" y="64" width="5" height="18" rx="1.5"/>
+<rect class="ua-w2" x="171.5" y="64" width="5" height="18" rx="1.5"/>
+<!-- sodium heat pipes through the shield -->
+<path class="ua-w3" d="M146 84C146 100 156.5 100 156.5 117M153.5 84C153.5 98 158.8 100 158.8 117M166.5 84C166.5 98 161.2 100 161.2 117M174 84C174 100 163.5 100 163.5 117"/>
+<!-- shield and reflector -->
+<path class="ua-w1" d="M143 96H177L172 112V136H148V112Z"/>
+<path class="ua-w2" d="M148 112H172"/>
+<rect class="ua-w3" x="153" y="114.5" width="14" height="19.5"/>
+<!-- core: 11 cm x 25 cm of uranium -->
+<rect class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" x="156.5" y="117" width="7" height="14.5" rx="1"/>
+</g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<g transform="translate(-22 3)">
+<!-- titanium can and weld seam -->
+<path class="ua-w1" d="M94 42H138A34 34 0 0 1 172 76V96A34 34 0 0 1 138 130H94A34 34 0 0 1 60 96V76A34 34 0 0 1 94 42Z"/>
+<path class="ua-w3" d="M94 46.5H138A29.5 29.5 0 0 1 167.5 76V96A29.5 29.5 0 0 1 138 125.5H94A29.5 29.5 0 0 1 64.5 96V76A29.5 29.5 0 0 1 94 46.5Z"/>
+<!-- epoxy header with lead connector -->
+<path class="ua-w1" d="M108 42V30A6 6 0 0 1 114 24H186A8 8 0 0 1 194 32V58A8 8 0 0 1 186 66H170.5"/>
+<path class="ua-w3" d="M194 33H152M194 39H152M145 41V50"/>
+<rect class="ua-w2" x="138" y="29" width="14" height="12" rx="1.5"/>
+<circle class="ua-w3" cx="145" cy="35" r="2.4"/>
+<circle class="ua-w3" cx="145" cy="52" r="2"/>
+<!-- pacing lead -->
+<path class="ua-w2" d="M194 34H236A26 26 0 0 1 262 60V96A22 22 0 0 0 284 118H296M194 38H236A22 22 0 0 1 258 60V96A26 26 0 0 0 284 122H296"/>
+<path class="ua-w2" d="M194 32H201L205 34M194 40H201L205 38"/>
+<rect class="ua-w2" x="296" y="117" width="4" height="6" rx="1"/>
+<path class="ua-w2" d="M300 118.5H305A1.5 1.5 0 0 1 305 121.5H300"/>
+<path class="ua-w3" d="M302 118.5l-3.5-3.5M302 121.5l-3.5 3.5"/>
+<!-- circuit module -->
+<rect class="ua-w3" x="78" y="57" width="72" height="27" rx="3"/>
+<path class="ua-w3" d="M86 64.5h10v9h-10zM103 62.5h14v13h-14zM96 84V92"/>
+<circle class="ua-w3" cx="131" cy="70" r="5.5"/>
+<!-- radioisotope battery: thermopile and Pu-238 capsule -->
+<rect class="ua-w2" x="78" y="92" width="62" height="26" rx="4"/>
+<path class="ua-w3" d="M112 96v18M117 96v18M122 96v18M127 96v18M132 96v18"/>
+<rect class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" x="84" y="98" width="22" height="14" rx="5"/>
+</g>
+</g>
+</svg>

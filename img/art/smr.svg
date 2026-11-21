@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<!-- grade -->
+<path class="ua-w3" d="M20 56H119M201 56H300M36 56l-4 4M42 56l-4 4M48 56l-4 4M266 56l-4 4M272 56l-4 4M278 56l-4 4"/>
+<!-- reactor building and crane -->
+<path class="ua-w1" d="M112 56V16H208V56"/>
+<rect class="ua-w2" x="114" y="23" width="92" height="3.5"/>
+<rect class="ua-w2" x="153" y="19" width="14" height="4" rx="1"/>
+<path class="ua-w3" d="M160 26.5V38M155.5 38H164.5"/>
+<!-- pool: concrete walls in section -->
+<path class="ua-w2" d="M119 56V143H201V56"/>
+<path class="ua-w1" d="M126 56V136H194V56"/>
+<path class="ua-w3" d="M119 59.2L122.2 56M119 67.7L126 60.7M119 76.2L126 69.2M119 84.6L126 77.6M119 93.1L126 86.1M119 101.6L126 94.6M119 110.1L126 103.1M119 118.6L126 111.6M119 127.1L126 120.1M119 135.6L126 128.6M194 60.6L198.6 56M120 143L127 136M194 69L201 62M128.5 143L135.5 136M194 77.5L201 70.5M137 143L144 136M194 86L201 79M145.5 143L152.5 136M194 94.5L201 87.5M154 143L161 136M194 103L201 96M162.5 143L169.5 136M194 111.5L201 104.5M171 143L178 136M194 120L201 113M179.4 143L186.4 136M194 128.4L201 121.4M187.9 143L201 129.9M196.4 143L201 138.4"/>
+<!-- water -->
+<path class="ua-w2" d="M126 60H151.5M168.5 60H194"/>
+<path class="ua-w3" d="M131 65h8M176 65h9M134 74h6M181 76h7M130 86h7M178 90h8"/>
+<!-- module: containment vessel 23 m, reactor vessel inside -->
+<path class="ua-w1" d="M152 62A8 8 0 0 1 168 62V124A8 8 0 0 1 152 124Z"/>
+<path class="ua-w2" d="M155.5 70.5A4.5 4.5 0 0 1 164.5 70.5V123.5A4.5 4.5 0 0 1 155.5 123.5ZM154.5 131V136M165.5 131V136"/>
+<path class="ua-w3" d="M155.5 74h9M156.5 80h7M156.5 85h7M156.5 90h7M156.5 95h7M156.5 100h7"/>
+<rect class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" x="157" y="112.5" width="6" height="11" rx="1"/>
+<!-- bioshield and steam line -->
+<rect class="ua-w2" x="146" y="49" width="28" height="4"/>
+<path class="ua-w2" d="M160 49V44H208"/>
+<!-- person, 1.8 m -->
+<circle class="ua-w2" cx="96" cy="50.4" r="1"/>
+<path class="ua-w2" d="M96 51.6V54.2L95 56M96 54.2L97 56M94.8 52.6h2.4"/>
+</g>
+</svg>

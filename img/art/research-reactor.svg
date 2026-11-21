@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="ua-w3" d="M14 136H306"/>
+<!-- hall crane -->
+<path class="ua-w2" d="M34 136V20M286 136V20"/>
+<rect class="ua-w2" x="34" y="20" width="252" height="5"/>
+<rect class="ua-w2" x="196" y="14.5" width="16" height="5.5" rx="1"/>
+<path class="ua-w3" d="M204 25V42"/>
+<path class="ua-w2" d="M204 42v2.5a2.5 2.5 0 1 1 -2.5 2.5"/>
+<!-- concrete shield block -->
+<path class="ua-w1" d="M96 136V100H112V62H140V128H180V62H208V100H224V136"/>
+<path class="ua-w3" d="M112 66.2L116.2 62M112 76.1L126.1 62M96 102L98 100M112 86L136 62M96 111.9L107.9 100M112 95.9L140 67.9M96 121.8L98.8 119M103.8 114L140 77.8M96 131.7L108.7 119M113.7 114L140 87.7M101.6 136L118.6 119M123.6 114L140 97.6M111.5 136L128.5 119M133.5 114L140 107.5M180 67.5L185.5 62M121.4 136L138.4 119M180 77.4L195.4 62M131.3 136L140 127.3M180 87.3L205.3 62M141.2 136L149.2 128M180 97.2L208 69.2M151.1 136L159.1 128M180 107.1L208 79.1M161 136L169 128M180 117L208 89M170.9 136L178.9 128M180 126.9L208 98.9M180.8 136L216.8 100M190.7 136L224 102.7M200.6 136L224 112.6M210.5 136L224 122.5M220.4 136L224 132.4"/>
+<!-- beam tube and experiment station -->
+<path class="ua-w2" d="M96 114H140M96 119H140"/>
+<rect class="ua-w2" x="91.5" y="111.5" width="4.5" height="10"/>
+<rect class="ua-w2" x="62" y="106" width="24" height="20" rx="1"/>
+<path class="ua-w2" d="M65.5 126V136M82.5 126V136"/>
+<path class="ua-w3" d="M86 116.5H91.5"/>
+<!-- pool water -->
+<path class="ua-w2" d="M140 67H180"/>
+<path class="ua-w3" d="M145 71.5h7M160 75h9M150 80h5M170 71.5h5"/>
+<!-- core on its grid plate, control rods -->
+<path class="ua-w3" d="M156.5 59V111M163.5 59V111"/>
+<path class="ua-w2" d="M150 122H170M152.5 122V128M167.5 122V128"/>
+<rect class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" x="154" y="111" width="12" height="10" rx="1"/>
+<!-- bridge -->
+<rect class="ua-w1" x="131" y="54.5" width="58" height="4.5"/>
+<circle class="ua-w2" cx="135" cy="60.5" r="1.5"/>
+<circle class="ua-w2" cx="185" cy="60.5" r="1.5"/>
+<rect class="ua-w2" x="152" y="44" width="16" height="10.5" rx="1"/>
+<path class="ua-w3" d="M133 54.5V47H149M187 54.5V47H171"/>
+</g>
+</svg>

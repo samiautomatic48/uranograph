@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<!-- pit profile: 15 m benches -->
+<path class="ua-w1" d="M10 36L38 36L46 58L66 58L74 80L94 80L102 102L122 102L130 124L196 124L204 102L224 102L232 80L262 80L270 58L290 58L298 36L310 36"/>
+<path class="ua-w3" d="M15 36l-4 4M24.5 36l-4 4M34 36l-4 4M39.9 41.2l-4 4M43.1 50.1l-4 4M47.1 58l-4 4M56.6 58l-4 4M66 58.1l-4 4M69.3 67l-4 4M72.5 75.9l-4 4M79.2 80l-4 4M88.7 80l-4 4M95.4 83.9l-4 4M98.7 92.9l-4 4M101.9 101.8l-4 4M111.3 102l-4 4M120.8 102l-4 4M124.8 109.8l-4 4M128.1 118.7l-4 4M133.9 124l-4 4M143.4 124l-4 4M152.9 124l-4 4M162.4 124l-4 4M171.9 124l4 4M181.4 124l4 4M190.9 124l4 4M197.5 119.9l4 4M200.7 111l4 4M204 102l4 4M213.5 102l4 4M223 102l4 4M226.9 94.1l4 4M230.1 85.1l4 4M236 80l4 4M245.5 80l4 4M255 80l4 4M262.9 77.6l4 4M266.1 68.7l4 4M269.4 59.8l4 4M277.6 58l4 4M287.1 58l4 4M292.3 51.8l4 4M295.5 42.8l4 4M300.2 36l4 4M309.7 36l4 4"/>
+<!-- strata, cut by the pit -->
+<path class="ua-w3" d="M10 68Q40 68.5 70.2 70M265 72Q288 72.5 310 74M10 105Q70 105.5 124 107.5M201.6 109Q256 110 310 112"/>
+<!-- haul truck, 15 m -->
+<g transform="translate(237 80)">
+<path class="ua-w2" d="M.5 -6.5L3 -10.2H14.6L15.4 -11.3H20.6V-10.4L16 -10.2L14.6 -6L4 -5.6ZM16.2 -9.4V-5.8H20.6V-9.6M20.6 -5.8V-3.2H18.9M8.4 -3.6H13.1"/>
+<circle class="ua-w2" cx="5.5" cy="-2.8" r="2.8"/>
+<circle class="ua-w2" cx="16" cy="-2.8" r="2.8"/>
+</g>
+<!-- ore body -->
+<path class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" d="M100 127.5Q118 126 131.5 126.5H194.5Q212 127.5 228 131Q204 143 166 142Q124 141 100 127.5Z"/>
+</g>
+</svg>

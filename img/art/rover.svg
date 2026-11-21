@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="ua-w3" d="M28 136H292M246 136q3-4 7.5 0M50 136q2-2.5 5 0"/>
+<g transform="translate(-9 0)">
+<!-- wheels 52.5 cm -->
+<circle class="ua-w1" cx="84" cy="122.5" r="13.5"/>
+<circle class="ua-w1" cx="140" cy="122.5" r="13.5"/>
+<circle class="ua-w1" cx="206" cy="122.5" r="13.5"/>
+<circle class="ua-w3" cx="84" cy="122.5" r="9"/>
+<circle class="ua-w3" cx="140" cy="122.5" r="9"/>
+<circle class="ua-w3" cx="206" cy="122.5" r="9"/>
+<circle class="ua-w2" cx="84" cy="122.5" r="2.5"/>
+<circle class="ua-w2" cx="140" cy="122.5" r="2.5"/>
+<circle class="ua-w2" cx="206" cy="122.5" r="2.5"/>
+<path class="ua-w3" d="M86.2 123.8L91.8 127M84 125L84 131.5M81.8 123.8L76.2 127M81.8 121.3L76.2 118M84 120L84 113.5M86.2 121.3L91.8 118M142.2 123.8L147.8 127M140 125L140 131.5M137.8 123.8L132.2 127M137.8 121.3L132.2 118M140 120L140 113.5M142.2 121.3L147.8 118M208.2 123.8L213.8 127M206 125L206 131.5M203.8 123.8L198.2 127M203.8 121.3L198.2 118M206 120L206 113.5M208.2 121.3L213.8 118"/>
+<!-- body, broken where the rocker passes in front -->
+<path class="ua-w1" d="M145 102H194.5Q196 102 196 100.5V96.6M196 91.2V79.5Q196 78 194.5 78H107.5Q106 78 106 79.5V100.5Q106 102 107.5 102H131"/>
+<path class="ua-w3" d="M106 83H196"/>
+<path class="ua-w2" d="M166 102V108.5H192V102"/>
+<!-- rocker-bogie suspension -->
+<path class="ua-w2" d="M114.4 109.6L158.3 98.7L188.2 94.7L193.2 94.4L197.2 94.9L200.1 96L202.2 97.7L203.6 100L204.3 103.4L207.7 102.6L206.8 98.8L204.9 95.4L201.9 93L198 91.6L193.3 91L187.8 91.3L157.7 95.3L113.6 106.4Z"/>
+<path class="ua-w2" d="M85.7 104.4L86 102.6L86.8 102L88.5 101.7L91.6 102.2L113.5 109.6L131.6 114.1L134.8 115.1L136.8 116.3L137.9 117.7L138.3 119.8L141.7 119.2L141.1 116.3L139.2 113.7L136.2 111.9L132.4 110.9L114.5 106.4L92.4 98.8L88.5 98.2L85.2 98.8L83 100.8L82.3 103.6Z"/>
+<rect class="ua-w2" x="202.5" y="103" width="7" height="9" rx="1"/>
+<rect class="ua-w2" x="80.5" y="104" width="7" height="9" rx="1"/>
+<path class="ua-w2" d="M206 112V120M84 113V120"/>
+<circle class="ua-w2" cx="158" cy="97" r="3"/>
+<circle class="ua-w2" cx="114" cy="108" r="2.6"/>
+<!-- mast and camera head -->
+<path class="ua-w2" d="M187 72V36M191 72V36"/>
+<rect class="ua-w2" x="184.5" y="72" width="9" height="6"/>
+<rect class="ua-w1" x="178" y="22" width="24" height="14" rx="2"/>
+<path class="ua-w2" d="M202 24.5h5v8h-5M202 34h3"/>
+<path class="ua-w3" d="M184 22v14"/>
+<!-- robotic arm and turret -->
+<rect class="ua-w2" x="196" y="79" width="4" height="10"/>
+<path class="ua-w2" d="M206 83.3L232.5 61.8M203.5 80.2L230 58.7M234.5 62L256.8 91.8M237.7 59.6L260 89.4"/>
+<circle class="ua-w2" cx="202" cy="84" r="4"/>
+<circle class="ua-w2" cx="234" cy="58" r="4"/>
+<circle class="ua-w1" cx="264" cy="98" r="9.5"/>
+<circle class="ua-w3" cx="264" cy="98" r="3.5"/>
+<path class="ua-w2" d="M261.5 107.2v6.5h5v-6.5M264 113.7v5.3"/>
+<!-- deck: high-gain antenna, UHF, low-gain -->
+<path class="ua-w2" d="M134 78V69M123.5 62.5L144.5 69.5L143.7 72L122.7 65Z"/>
+<rect class="ua-w2" x="116" y="66" width="5" height="12" rx="1"/>
+<path class="ua-w3" d="M158 78V73M156 73h4"/>
+<!-- MMRTG: 67 cm long, 64 cm across the fins -->
+<g transform="translate(87 66.5) rotate(35)">
+<rect class="ua-w2" x="-17.5" y="-16.5" width="35" height="33" rx="1"/>
+<path class="ua-w3" d="M-17.5 -11.7H17.5M-17.5 11.7H17.5"/>
+<rect class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" x="-17.5" y="-7" width="35" height="14" rx="2"/>
+<path class="ua-w2" d="M-17.5 -5H-21V5H-17.5M17.5 -5.5L25 -3M17.5 5.5L25 3"/>
+</g>
+</g>
+</g>
+</svg>

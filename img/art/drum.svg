@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="ua-w3" d="M92 136H228"/>
+<!-- 55-gallon open-head drum: 88 cm tall, 58 cm diameter -->
+<rect class="ua-w1" x="122" y="26" width="76" height="5.5" rx="2"/>
+<path class="ua-w2" d="M198 27.5h4.5v3h-4.5"/>
+<path class="ua-w3" d="M200.3 26v6"/>
+<path class="ua-w1" d="M124 31.5V59.5A2.5 2.5 0 0 0 124 64.5V97.5A2.5 2.5 0 0 0 124 102.5V131.5M196 31.5V59.5A2.5 2.5 0 0 1 196 64.5V97.5A2.5 2.5 0 0 1 196 102.5V131.5"/>
+<rect class="ua-w1" x="123" y="131.5" width="74" height="4.5" rx="1.5"/>
+<!-- rolling hoops -->
+<path class="ua-w3" d="M124 59.5H140.5M124 64.5H140.5M184 59.5H196M184 64.5H196M124 97.5H139.5M124 102.5H139.5M186.5 97.5H196M186.5 102.5H196"/>
+<!-- cut-away: yellowcake -->
+<path class="ua-w2" d="M141 56Q150 49 162 53Q175 48 183 57L185.5 86Q187.5 106 182.5 118Q171 125.5 153 121.5Q140.5 120.5 139.5 108L140 82Z"/>
+<path class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" d="M142.5 80Q152 73 163 76Q174 72 183 79L184 100Q184.5 110 180.5 116Q170 122.5 154 119Q143.5 118 142.5 108Z"/>
+</g>
+</svg>

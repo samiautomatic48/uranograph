@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="ua-w3" d="M52 136H276"/>
+<!-- ruler, 8 px per mm -->
+<path class="ua-w2" d="M70 136V40L75 36.5L80 40.5L85 36.5L90 40V136"/>
+<path class="ua-w3" d="M90 128h-5M90 120h-5M90 112h-5M90 104h-5M90 96h-8M90 88h-5M90 80h-5M90 72h-5M90 64h-5M90 56h-11M90 48h-5M93 56H105"/>
+<!-- pellet in elevation: 8.2 mm diameter, 10 mm tall, chamfered -->
+<path class="ua-w1" d="M111 56H171L174 59V133L171 136H111L108 133V59Z"/>
+<path class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" d="M115 60.5H167L169.5 63V129L167 131.5H115L112.5 129V63Z"/>
+<path class="ua-w3" d="M119 60.5Q141 66.5 163 60.5M119 131.5Q141 125.5 163 131.5"/>
+<!-- end view: chamfer and dished face -->
+<circle class="ua-w1" cx="228" cy="96" r="33"/>
+<circle class="ua-w3" cx="228" cy="96" r="28.5"/>
+<circle class="ua-w3" cx="228" cy="96" r="19"/>
+<path class="ua-w3" d="M224 96h8M228 92v8"/>
+</g>
+</svg>

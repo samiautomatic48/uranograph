@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+<style>.ua-w1{stroke-width:1.6}.ua-w2{stroke-width:1}.ua-w3{stroke-width:.6}.ua-w1,.ua-w2,.ua-w3{vector-effect:non-scaling-stroke}</style>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="ua-w3" d="M12 136H310"/>
+<!-- trailer -->
+<rect class="ua-w1" x="28" y="111" width="216" height="4"/>
+<path class="ua-w2" d="M34 115V119.5H198L208 115M190 119.5V128.5M186.5 128.5H193.5M190 124L197 119.5M30 115V125H35"/>
+<path class="ua-w3" d="M38 121.5H98"/>
+<circle class="ua-w1" cx="46" cy="127.5" r="8.5"/>
+<circle class="ua-w1" cx="68" cy="127.5" r="8.5"/>
+<circle class="ua-w1" cx="90" cy="127.5" r="8.5"/>
+<circle class="ua-w3" cx="46" cy="127.5" r="4"/>
+<circle class="ua-w3" cx="68" cy="127.5" r="4"/>
+<circle class="ua-w3" cx="90" cy="127.5" r="4"/>
+<!-- tractor -->
+<path class="ua-w2" d="M212 119H254M212 122.5H232M224 119L227 115H241L244 119"/>
+<path class="ua-w3" d="M211 119V130"/>
+<circle class="ua-w1" cx="222" cy="127.5" r="8.5"/>
+<circle class="ua-w1" cx="243" cy="127.5" r="8.5"/>
+<circle class="ua-w1" cx="290" cy="127.5" r="8.5"/>
+<circle class="ua-w3" cx="222" cy="127.5" r="4"/>
+<circle class="ua-w3" cx="243" cy="127.5" r="4"/>
+<circle class="ua-w3" cx="290" cy="127.5" r="4"/>
+<path class="ua-w1" d="M254 119V86Q254 84 256 84H270Q274 84 276 88.5L281 100.5L299 103Q303 103.5 303 107.5V124H299.9A10.5 10.5 0 0 0 280.1 124H277V119Z"/>
+<path class="ua-w2" d="M258 88H269.5Q271.5 88 272.3 89.8L276.5 99.5H258Z"/>
+<path class="ua-w2" d="M254 84L255 71.5Q255.3 69.8 257 70.5L271 84M251 119V78Q251 75.5 249 75"/>
+<rect class="ua-w2" x="257" y="120.5" width="17" height="8.5" rx="2.5"/>
+<!-- 40 ft ISO container -->
+<rect class="ua-w1" x="32" y="67" width="207" height="44"/>
+<path class="ua-w2" d="M32 70.5h4.5V67M239 70.5h-4.5V67M32 107.5h4.5V111M239 107.5h-4.5V111"/>
+<path class="ua-w3" d="M36.5 70H98M207 70H234.5M36.5 108H102M204 108H234.5"/>
+<path class="ua-w3" d="M42 70V108M48 70V108M54 70V108M60 70V108M66 70V108M72 70V108M78 70V108M84 70V108M90 70V108M96 70V108M210 70V108M216 70V108M222 70V108M228 70V108"/>
+<!-- cut-away: reactor canister, heat pipes, power conversion -->
+<path class="ua-w2" d="M100 77Q102 71 109 72L197 70.5Q205 71 205.5 78L206 100Q206 107 199 106.5L108 108Q100.5 107.5 100 100Z"/>
+<rect class="ua-w2" x="107" y="77" width="92" height="24" rx="7"/>
+<rect class="ua-w3" x="113" y="80" width="42" height="18" rx="3"/>
+<path class="ua-w3" d="M150 85.5H177M150 89H177M150 92.5H177M182.3 81V97M187.7 81V97"/>
+<rect class="ua-w2" x="177" y="81" width="16" height="16" rx="2"/>
+<rect class="ua-hot" fill="currentColor" fill-opacity=".9" stroke="none" x="118" y="83" width="32" height="12" rx="2"/>
+</g>
+</svg>
