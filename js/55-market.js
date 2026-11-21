@@ -28,7 +28,7 @@
     const sets = [['us', 'United States', C.us], ['eu', 'European Union', C.eu]].filter((x) => x[2] && x[2].points && x[2].points.filter((p) => p.new_tu != null && p.year >= latest - 2).length > 0);
     if (!sets.length) return;
     sets.forEach((x) => { x[2] = { ...x[2], points: x[2].points.filter((p) => p.new_tu != null || p.loaded_tu != null) }; });
-    const fig = block(host, 'What they sign each year', 'Uranium that US reactor operators newly placed under contract in each year, against the uranium loaded into US reactors that year. Signing less than is loaded means running down earlier contracts and stock.');
+    const fig = block(host, 'What they sign each year', 'Uranium US reactor operators newly contracted each year, against the uranium they loaded. Signing less than is loaded means running down earlier contracts and stock.');
     fig.appendChild(U.el('div', { class: 'legend', id: 'con-legend' }));
     const grid = U.el('div', { style: { display: 'grid', gap: '32px', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))' } });
     fig.appendChild(grid);
@@ -242,7 +242,7 @@
 
   /* ----- funds ----- */
   function funds(host, F) {
-    const fig = block(host, 'Pounds parked in funds', 'Two listed vehicles buy physical uranium and hold it. They can only raise money to buy more when their units trade at or above the value of the uranium they hold.');
+    const fig = block(host, 'Pounds parked in funds', 'Two listed funds buy physical uranium and hold it. They can raise money to buy more only when their units trade at or above the value of that uranium.');
     const statsEl = U.el('div', { class: 'stats' }); fig.appendChild(statsEl);
     const grid = U.el('div', { style: { display: 'grid', gap: '32px', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))' } });
     const a = U.el('div', null, U.el('div', { class: 'legend', id: 'funds-legend' }), U.el('div', { class: 'fig__body', id: 'funds-chart' }));

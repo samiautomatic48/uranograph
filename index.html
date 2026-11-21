@@ -69,9 +69,9 @@
 <section class="plate" id="atlas" aria-labelledby="atlas-h">
   <div class="wrap plate__grid">
     <div class="plate__intro">
-      <h1 id="atlas-h" data-in style="--i:0">Where uranium is mined, and where it is burned.</h1>
+      <h1 id="atlas-h" data-in style="--i:0">Where uranium is mined. Where it is burned.</h1>
       <p class="lede" data-in style="--i:1">
-        <i><span class="key" style="--c:var(--glow-demand)"></span>Blue</i> spikes are power stations, sized by the uranium they need each year.
+        <i><span class="key" style="--c:var(--glow-demand)"></span>Blue</i> spikes are reactors, sized by the uranium they need.
         <i><span class="key" style="--c:var(--glow-supply)"></span>Amber</i> spikes are mines, sized by what they ship.
         Drag the globe. Drag the year.
       </p>
@@ -163,7 +163,7 @@
   <div class="wrap">
     <div class="sec-head">
       <h2 id="split-h">Mined here, used there.</h2>
-      <p class="lede">Most uranium comes out of the ground in countries that use little of it. Switch the view to count each mine under the home region of its owners.</p>
+      <p class="lede">Most uranium is mined in countries that use little of it. Switch the view to count each mine by where its owners are from.</p>
     </div>
     <div class="stats" id="split-stats"></div>
     <div class="controls" id="split-controls"></div>
@@ -182,7 +182,7 @@
   <div class="wrap">
     <div class="sec-head">
       <h2 id="balance-h">Do the mines cover the reactors?</h2>
-      <p class="lede">Columns are mine output, added up mine by mine and project by project. The line is what reactors need. Change an assumption and the gap moves.</p>
+      <p class="lede">Columns are mine output, added up mine by mine. The line is what reactors need. Change an assumption and the gap moves.</p>
     </div>
     <div class="stats" id="balance-stats"></div>
     <div class="controls" id="balance-controls"></div>
@@ -201,7 +201,7 @@
   <div class="wrap">
     <div class="sec-head">
       <h2 id="reactors-h">The fleet, one square per reactor.</h2>
-      <p class="lede">Solid squares are running. Hatched ones are being built. Outlines are planned with a named site. Each new unit adds a first core, then a reload every year or two for sixty years.</p>
+      <p class="lede">Solid squares are running. Hatched are being built. Outlines are planned at a named site. Each new unit needs a first core, then reloads for sixty years.</p>
     </div>
     <div class="stats" id="fleet-stats"></div>
     <div class="controls" id="fleet-controls"></div>
@@ -232,7 +232,7 @@
   <div class="wrap">
     <div class="sec-head">
       <h2 id="mines-h">A handful of mines carry the market.</h2>
-      <p class="lede">Uranium supply is concentrated in a few deposits and a few companies. Bars show what each mine produced. The tick marks what it is licensed or built to produce.</p>
+      <p class="lede">Bars show what each mine produced. The tick marks its capacity.</p>
     </div>
     <div class="stats" id="mines-stats"></div>
     <figure class="fig">
@@ -253,7 +253,7 @@
 
     <div class="sub-head">
       <h3>Built to produce, and what came out</h3>
-      <p>Each bar is a mine's output as a share of the capacity it is licensed or built for. Outlined bars are mines still ramping up.</p>
+      <p>Each bar is a mine's output as a share of its capacity. Outlined bars are still ramping up.</p>
     </div>
     <figure class="fig">
       <div class="legend" id="nameplate-legend"></div>
@@ -266,7 +266,7 @@
 
     <div class="sub-head">
       <h3>When the new supply arrives</h3>
-      <p>Restarts and new mines. The bar spans the earliest and latest credible first year of production. The dot is the owner's own date. Mines already producing and still climbing sit at the left.</p>
+      <p>Restarts and new mines. Each bar spans the earliest and latest credible first year. The dot is the owner's date. Mines already ramping up sit at the left.</p>
     </div>
     <figure class="fig">
       <div class="legend" id="projects-legend"></div>
@@ -279,7 +279,7 @@
     <div id="cost-block" hidden>
       <div class="sub-head">
         <h3>What a pound costs to mine</h3>
-        <p>Each block is a mine. Its width is annual output, its height the cost the owner reports. Where the line of reactor need crosses the blocks is the cost of the last pound required.</p>
+        <p>Each block is a mine: width is annual output, height is the cost its owner reports. Where reactor need crosses the blocks is the cost of the last pound required.</p>
       </div>
       <figure class="fig">
         <div class="controls" id="cost-controls"></div>
@@ -295,7 +295,7 @@
     <div id="costs-block" hidden>
       <div class="sub-head">
         <h3>The cost of a pound, year by year</h3>
-        <p>What the two largest listed producers report it costs them to mine a pound, in their own measures. The bracket at the end is each company's guidance for the current year.</p>
+        <p>What the two largest listed producers say a pound costs them to mine, each in its own measure. The bracket is this year's guidance.</p>
       </div>
       <figure class="fig">
         <div class="legend" id="costs-legend"></div>
@@ -314,7 +314,7 @@
   <div class="wrap">
     <div class="sec-head">
       <h2 id="price-h">The price of a pound.</h2>
-      <p class="lede">Spot is what a pound of U₃O₈ costs for delivery now. Term is the base price utilities sign for deliveries years out. The marks along the bottom of the chart are the events that moved the market.</p>
+      <p class="lede">Spot is a pound of U₃O₈ for delivery now. Term is the base price utilities sign for deliveries years out. Marks along the bottom are the events that moved the market.</p>
     </div>
     <div class="stats" id="price-stats"></div>
     <div class="controls" id="price-controls"></div>
@@ -345,7 +345,7 @@
   <div class="wrap">
     <div class="sec-head">
       <h2 id="buyers-h">What utilities still have to buy.</h2>
-      <p class="lede">Reactor operators buy most of their uranium years ahead, under long contracts. The United States publishes how much its operators have locked in, how much is still open, what sits in inventory and where it was mined.</p>
+      <p class="lede">Reactor operators buy most of their uranium years ahead, under long contracts. The United States publishes what its operators have locked in, what is still open, what sits in inventory and where it was mined.</p>
     </div>
     <div id="buyers-extra"></div>
   </div>
@@ -356,7 +356,7 @@
   <div class="wrap">
     <div class="sec-head">
       <h2 id="wire-h">What changed this month.</h2>
-      <p class="lede">The news that moved supply or demand, and what listed companies filed with regulators. Headlines link to the original. The one-line notes are ours.</p>
+      <p class="lede">News that moved supply or demand, and what listed companies filed. Headlines link to the original. The one-line notes are ours.</p>
     </div>
     <div class="wire">
       <div>
@@ -375,7 +375,7 @@
     <div id="companies-block" hidden>
       <div class="sub-head">
         <h3>Who is listed</h3>
-        <p>The public companies along the chain, from the mine to the reactor, with where each one files.</p>
+        <p>Public companies along the chain, from mine to reactor, and where each one files.</p>
       </div>
       <div class="controls" id="companies-controls"></div>
       <div class="tableview" id="companies-table" style="max-height:520px;margin-top:0"></div>
@@ -388,7 +388,7 @@
   <div class="wrap">
     <div class="sec-head">
       <h2 id="scale-h">How big is nuclear power?</h2>
-      <p class="lede">From a battery that trickles microwatts for decades to a station that lights a region, on one logarithmic ruler. The amber part of each drawing is where the heat is made.</p>
+      <p class="lede">From a battery that trickles microwatts to a station that lights a region, on one logarithmic ruler. Amber marks where the heat is made.</p>
     </div>
     <figure class="fig ladder" id="ladder">
       <div class="ladder__map" id="ladder-map" aria-hidden="true"></div>
@@ -413,7 +413,7 @@
   <div class="wrap">
     <div class="sec-head">
       <h2 id="facts-h">One reactor, one year.</h2>
-      <p class="lede">What it takes to run a large reactor for twelve months, from the ore body to the grid. Below that, the figures people quote, each checked against its source.</p>
+      <p class="lede">What it takes to run a large reactor for a year, from ore to grid. Below, the figures people quote, each checked against its source.</p>
     </div>
     <figure class="fig" id="flow-fig" hidden>
       <div class="flow" id="flow-steps"></div>

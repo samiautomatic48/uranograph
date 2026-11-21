@@ -194,8 +194,14 @@
         const tip = tipOf(it), len = Math.hypot(it.sx - cx, it.sy - cy) || 1;
         const nx = (it.sx - cx) / len, ny = (it.sy - cy) / len;
         const text = String(it.ref.short || it.ref.name || '').toUpperCase();
-        const tw = ctx.measureText(text).width, right = nx >= 0;
-        const lx = tip[0] + nx * 7 + (right ? 2 : -2), ly = tip[1] + ny * 7;
+        const tw = ctx.measureText(text).width, ly = tip[1] + ny * 7;
+        // Keep the whole label inside the canvas: if it would run off the edge on the spike's own side, put
+        // it on the other side, and leave it out if it fits on neither.
+        const at = (r) => tip[0] + nx * 7 + (r ? 2 : -2), fits = (r) => (r ? at(r) + tw <= S.w - 4 : at(r) - tw >= 4);
+        let right = nx >= 0;
+        if (!fits(right)) { if (fits(!right)) right = !right; else if (it !== hlNow) continue; }
+        if (ly < 9 || ly > S.h - 9) { if (it !== hlNow) continue; }
+        const lx = at(right);
         const box = { x0: right ? lx : lx - tw, x1: right ? lx + tw : lx, y0: ly - 7, y1: ly + 7 };
         if (it !== hlNow && placed.some((b) => box.x0 < b.x1 + 4 && box.x1 > b.x0 - 4 && box.y0 < b.y1 && box.y1 > b.y0)) continue;
         placed.push(box);

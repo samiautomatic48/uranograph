@@ -214,7 +214,7 @@
     const capSum = d3.sum(capMines, (m) => m.capacity_tu), outSum = d3.sum(capMines, (m) => m.production_tu[LYb]);
     const utilNote = capSum > 0 ? 'In ' + LYb + ' the mines already producing made ' + U.pct(outSum / capSum) + ' of their nameplate. ' : '';
     const figEl = host.closest('.fig');
-    if (figEl) figEl.insertBefore(U.el('p', { class: 'note', text: 'The base case takes every restart and new mine at its owner’s own date and planned output, and counts only reactors that are running, being built or planned at a named site. ' + utilNote + 'Use the controls to see what a slip, a shortfall or a different demand outlook does.' }), U.$('.fig__tools', figEl));
+    if (figEl) figEl.insertBefore(U.el('p', { class: 'note', text: 'The base case takes every restart and new mine at its owner’s date and planned output, and counts only reactors that are running, being built or planned at a named site. ' + utilNote + 'Use the controls to test a slip, a shortfall or a different demand outlook.' }), U.$('.fig__tools', figEl));
 
     let ask = null;
     function update() { compute(); stats(); legend(); table(); if (ask) ask(); }
