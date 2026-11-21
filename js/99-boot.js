@@ -46,7 +46,7 @@
   U.load().then(() => {
     safe('model', () => U.model.prepare());
     safe('masthead', masthead);
-    ['globe', 'split', 'balance', 'fleet', 'mines', 'price', 'market', 'wire', 'scale', 'sources'].forEach((k) => {
+    ['globe', 'split', 'balance', 'fleet', 'mines', 'price', 'market', 'scale', 'wire', 'sources'].forEach((k) => {
       if (U[k] && U[k].init) safe(k, () => U[k].init());
     });
     document.documentElement.setAttribute('data-ready', '1');
