@@ -3,13 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Uranograph</title>
+<title>Uranograph · Uranium market atlas: reactors, mines, price</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="A monthly atlas of the uranium market: every reactor, every mine, the balance between them, the price, and the filings.">
-<meta property="og:title" content="Uranograph">
-<meta property="og:description" content="Every reactor, every mine, and the balance between them. A monthly atlas of the uranium market.">
+<meta name="description" content="A free monthly atlas of the uranium market. Every reactor and every mine on one globe, supply against demand to 2040, prices, fund holdings, news and filings.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://uranograph.com/">
+<meta property="og:site_name" content="Uranograph">
+<meta property="og:title" content="Uranograph: the uranium market, mapped">
+<meta property="og:description" content="Every reactor, every mine, and the balance between them. A free monthly atlas of the uranium market.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://uranograph.com/">
+<meta property="og:image" content="https://uranograph.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A globe with blue spikes for nuclear reactors and amber spikes for uranium mines, beside this year's supply and demand.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Uranograph: the uranium market, mapped">
+<meta name="twitter:description" content="Every reactor, every mine, and the balance between them. A free monthly atlas of the uranium market.">
+<meta name="twitter:image" content="https://uranograph.com/og.jpg">
+<link rel="alternate" type="text/plain" href="llms.txt" title="Summary and datasets for language models">
 <meta name="theme-color" content="#0B0E0A">
+<!-- seo:jsonld:start -->
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"Uranograph","url":"https://uranograph.com/","description":"A free monthly atlas of the uranium market: every power reactor and every uranium mine, the balance between supply and demand to 2040, prices, fund holdings, news and filings. Issue 1, data as of 20 November 2026.","inLanguage":"en"},{"@context":"https://schema.org","@type":"Dataset","name":"Uranograph uranium market atlas, November 2026","description":"A free monthly atlas of the uranium market: every power reactor and every uranium mine, the balance between supply and demand to 2040, prices, fund holdings, news and filings. Issue 1, data as of 20 November 2026. In 2026, the world's 417 running power reactors (381 GWe) need about 179 million lb U3O8 (68,988 tU) a year, counting first cores for units about to start. Uranium mines are modelled to produce about 188 million lb U3O8 (72,444 tU) in 2026, which covers 105% of that need before secondary supply.","url":"https://uranograph.com/","keywords":["uranium","uranium market","nuclear fuel","nuclear reactors","uranium mines","uranium supply and demand","uranium price","U3O8"],"isAccessibleForFree":true,"dateModified":"2026-11-20","temporalCoverage":"1956/2040","spatialCoverage":"World","creator":{"@type":"Organization","name":"Uranograph","url":"https://uranograph.com/"},"license":"https://uranograph.com/DATA-LICENSES.md","distribution":[{"@type":"DataDownload","name":"reactors","description":"Every power reactor unit: name, country, coordinates, status, type, net MWe, grid-connection and shutdown years, and modelled annual uranium need (req, tU).","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/reactors.json","license":"https://opendatacommons.org/licenses/odbl/1-0/"},{"@type":"DataDownload","name":"mines","description":"Every uranium mine and project: owners, method, status, coordinates, production by year (tU), capacity, planned start, ramp and planned output.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/mines.json"},{"@type":"DataDownload","name":"production by country","description":"Mine production by country and year, 2007 onward (tU). OECD-NEA/IAEA Red Book, CC BY 4.0, plus the latest year summed from listed mines.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/production_by_country.json","license":"https://creativecommons.org/licenses/by/4.0/"},{"@type":"DataDownload","name":"prices","description":"Uranium price series: IMF monthly average and EIA annual delivered price (USD per lb U3O8), the latest cited spot and long-term prices, and conversion and enrichment prices.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/prices.json"},{"@type":"DataDownload","name":"outlook","description":"Published outlooks: Red Book production scenarios, World Nuclear Association 2040 demand scenarios, US utility uncovered requirements, inventories and origins of US purchases.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/outlook.json"},{"@type":"DataDownload","name":"contracting","description":"US and EU utility contracting: newly contracted volumes against uranium loaded, by year.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/contracting.json"},{"@type":"DataDownload","name":"mining costs","description":"Cost of producing a pound: Kazatomprom and Cameco cash and all-in costs by year.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/mining_costs.json"},{"@type":"DataDownload","name":"funds","description":"Physical uranium funds and ETFs: pounds held by Sprott Physical Uranium Trust and Yellow Cake, and ETF assets.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/funds.json"},{"@type":"DataDownload","name":"secondary supply","description":"Assumed secondary supply (tU) by year.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/secondary_supply.json"},{"@type":"DataDownload","name":"events","description":"Dated market events shown on the price chart.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/events.json"},{"@type":"DataDownload","name":"companies","description":"Listed uranium and nuclear-fuel companies: tickers, role in the fuel chain, filing venues.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/companies.json"},{"@type":"DataDownload","name":"filings","description":"Recent regulatory filings by those companies, with links.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/filings.json"},{"@type":"DataDownload","name":"news","description":"The month's news: headline, source, date, link and a one-line summary.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/news.json"},{"@type":"DataDownload","name":"scale","description":"Nuclear power sources from microwatt batteries to the largest plants (watts).","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/scale.json"},{"@type":"DataDownload","name":"facts","description":"Sourced facts about uranium and the fuel cycle.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/facts.json"},{"@type":"DataDownload","name":"sources","description":"Every source used, what it was used for, and its reuse terms.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/sources.json"}],"hasPart":[{"@type":"WebPage","name":"Reactors","url":"https://uranograph.com/reactors/"},{"@type":"WebPage","name":"Mines","url":"https://uranograph.com/mines/"},{"@type":"WebPage","name":"Balance","url":"https://uranograph.com/balance/"},{"@type":"WebPage","name":"Price","url":"https://uranograph.com/price/"},{"@type":"WebPage","name":"Facts","url":"https://uranograph.com/facts/"}]}]</script>
+<!-- seo:jsonld:end -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230B0E0A'/%3E%3Cpath d='M9 7v11a7 7 0 0 0 14 0V7' fill='none' stroke='%23FFC21A' stroke-width='3.5' stroke-linecap='square'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,6 +136,28 @@
   </div>
 </section>
 
+<!-- The month's numbers in words, for readers and crawlers without JavaScript. Written by scripts/build-seo.mjs. -->
+<!-- seo:digest:start -->
+<noscript>
+<section class="wrap digest" aria-labelledby="digest-h">
+  <h2 id="digest-h">The uranium market in numbers, November 2026</h2>
+  <p>The charts on this page need JavaScript. These are the same numbers in words, as of 20 November 2026.</p>
+  <ul>
+    <li>In 2026, the world's 417 running power reactors (381 GWe) need about 179 million lb U3O8 (68,988 tU) a year, counting first cores for units about to start.</li>
+    <li>Uranium mines are modelled to produce about 188 million lb U3O8 (72,444 tU) in 2026, which covers 105% of that need before secondary supply.</li>
+    <li>82 reactors are under construction and 130 more are planned. The largest fleets in operation are in United States (94), China (65), France (57), Russia (34) and South Korea (24). Most construction is in China (41), India (8) and Russia (7).</li>
+    <li>In 2025, mines produced 175 million lb U3O8 (67,223 tU). The largest producing countries were Kazakhstan (38%), Canada (20%), Namibia (13%) and Uzbekistan (10%).</li>
+    <li>The largest mines by 2025 output were Cigar Lake, Canada (7,347 tU), Navoiyuran, Uzbekistan (7,000 tU), McArthur River / Key Lake, Canada (5,808 tU), Husab, Namibia (4,605 tU) and KATCO, Kazakhstan (3,714 tU).</li>
+    <li>The atlas tracks 146 mines and projects, 59 of them producing or ramping up, and 877 reactor units from 1956 to 2040.</li>
+    <li>The industry month-end spot price for October 2026 was $91.55 per lb U3O8 and the long-term price was $98.00 (as published by Cameco). The IMF monthly average for October 2026 was $72.89.</li>
+    <li>Counting reactors under construction and planned, reactor need reaches about 229 million lb U3O8 (88,172 tU) in 2035. If every restart and new mine arrived on its owner's schedule and delivered its full plan, mine output that year would be about 277 million lb U3O8 (106,455 tU), not counting proposed mines. The page lets you test late and partial delivery. Nothing on the site is a price forecast.</li>
+  </ul>
+  <p>The same data as plain tables: <a href="reactors/">reactors</a>, <a href="mines/">mines</a>, <a href="balance/">balance</a>, <a href="price/">price</a>, <a href="facts/">facts</a>.</p>
+  <p>The full datasets are plain JSON files: <a href="data/reactors.json">reactors</a>, <a href="data/mines.json">mines</a>, <a href="data/production_by_country.json">production by country</a>, <a href="data/prices.json">prices</a> and more, listed in <a href="llms.txt">llms.txt</a>.</p>
+</section>
+</noscript>
+<!-- seo:digest:end -->
+
 <!-- mined here, used there -->
 <section class="sec" id="split" aria-labelledby="split-h">
   <div class="wrap">
@@ -151,7 +189,7 @@
     <figure class="fig">
       <div class="legend" id="balance-legend"></div>
       <div class="fig__body" id="balance-chart"></div>
-      <div class="fig__tools"><button class="btn" type="button" data-table="balance-table" aria-expanded="false">Show table</button></div>
+      <div class="fig__tools"><a class="btn" href="balance/">Open as a page</a><button class="btn" type="button" data-table="balance-table" aria-expanded="false">Show table</button></div>
       <div class="tableview" id="balance-table" hidden></div>
       <div class="titleblock" id="tb-balance"></div>
     </figure>
@@ -170,7 +208,7 @@
     <figure class="fig">
       <div class="legend" id="fleet-legend"></div>
       <div class="fig__body lattice" id="fleet-lattice"></div>
-      <div class="fig__tools"><button class="btn" type="button" data-table="fleet-table" aria-expanded="false">Show table</button></div>
+      <div class="fig__tools"><a class="btn" href="reactors/">Open as a page</a><button class="btn" type="button" data-table="fleet-table" aria-expanded="false">Show table</button></div>
       <div class="tableview" id="fleet-table" hidden></div>
       <div class="titleblock" id="tb-fleet"></div>
     </figure>
@@ -208,7 +246,7 @@
     </div>
     <figure class="fig">
       <div class="fig__body" id="mines-chart"></div>
-      <div class="fig__tools"><button class="btn" type="button" data-table="mines-table" aria-expanded="false">Show table</button></div>
+      <div class="fig__tools"><a class="btn" href="mines/">Open as a page</a><button class="btn" type="button" data-table="mines-table" aria-expanded="false">Show table</button></div>
       <div class="tableview" id="mines-table" hidden></div>
       <div class="titleblock" id="tb-mines"></div>
     </figure>
@@ -283,7 +321,7 @@
     <figure class="fig">
       <div class="legend" id="price-legend"></div>
       <div class="fig__body" id="price-chart"></div>
-      <div class="fig__tools"><button class="btn" type="button" data-table="price-table" aria-expanded="false">Show table</button></div>
+      <div class="fig__tools"><a class="btn" href="price/">Open as a page</a><button class="btn" type="button" data-table="price-table" aria-expanded="false">Show table</button></div>
       <div class="tableview" id="price-table" hidden></div>
       <div class="titleblock" id="tb-price"></div>
     </figure>
@@ -352,11 +390,18 @@
       <h2 id="scale-h">How big is nuclear power?</h2>
       <p class="lede">From a battery that trickles microwatts for decades to a station that lights a region, on one logarithmic ruler. The amber part of each drawing is where the heat is made.</p>
     </div>
-    <figure class="fig ladder">
-      <div class="ladder__scroll" id="ladder-scroll" tabindex="0" aria-label="Scale of nuclear power sources, scrolls sideways">
-        <div class="ladder__rail" id="ladder-rail"></div>
+    <figure class="fig ladder" id="ladder">
+      <div class="ladder__map" id="ladder-map" aria-hidden="true"></div>
+      <div class="ladder__view">
+        <div class="ladder__scroll" id="ladder-scroll" tabindex="0" aria-label="Scale of nuclear power sources, scrolls sideways">
+          <div class="ladder__rail" id="ladder-rail"></div>
+        </div>
+        <div class="ladder__fade ladder__fade--l" aria-hidden="true"></div>
+        <div class="ladder__fade ladder__fade--r" aria-hidden="true"></div>
+        <button class="ladder__arrow ladder__arrow--l" id="ladder-prev" type="button" aria-label="Show smaller sources" disabled><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
+        <button class="ladder__arrow ladder__arrow--r" id="ladder-next" type="button" aria-label="Show larger sources" disabled><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
       </div>
-      <div class="fig__tools"><button class="btn" type="button" data-table="scale-table" aria-expanded="false">Show table</button></div>
+      <div class="fig__tools"><a class="btn" href="facts/">Open as a page</a><button class="btn" type="button" data-table="scale-table" aria-expanded="false">Show table</button></div>
       <div class="tableview" id="scale-table" hidden></div>
       <div class="titleblock" id="tb-scale"></div>
     </figure>
@@ -409,6 +454,11 @@
   <div>
     <p>A free, independent atlas of the uranium market, redrawn every month. It reports data and shows its sources. It is not investment advice and makes no price forecast.</p>
   </div>
+  <nav class="foot__pages" aria-label="Data pages">
+    <span class="label">The data as plain pages</span>
+    <a href="reactors/">Reactors</a> <a href="mines/">Mines</a> <a href="balance/">Balance</a> <a href="price/">Price</a> <a href="facts/">Facts</a>
+    <a href="llms.txt">llms.txt</a> <a href="DATA-LICENSES.md">Licences</a>
+  </nav>
 </footer>
 
 <div class="tip" id="tip" role="status" aria-live="off"></div>

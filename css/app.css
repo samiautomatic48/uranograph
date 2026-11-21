@@ -165,9 +165,10 @@ img, svg, canvas { display: block; max-width: 100%; }
 .mast__tools { display: flex; align-items: center; gap: var(--s2); margin-left: auto; }
 @media (min-width: 1080px) {
   .nav { display: flex; }
-  .mast__tools { margin-left: var(--s5); }
-  .brand__issue { display: inline; }
+  .mast__tools { margin-left: var(--s5); flex: none; }
+  .mast__tools .seg { flex-wrap: nowrap; } /* the unit switch stays on one line beside the full nav */
 }
+@media (min-width: 1260px) { .brand__issue { display: inline; } } /* the issue label needs the extra room */
 
 /* segmented control + buttons */
 .seg {
@@ -446,8 +447,36 @@ table.data thead th {
 
 /* ---------- scale ladder ---------- */
 .ladder { position: relative; }
-.ladder__scroll { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; padding-bottom: var(--s3); margin-inline: calc(-1 * var(--gutter-l)) calc(-1 * var(--gutter-r)); padding-inline: var(--gutter-l) var(--gutter-r); cursor: grab; }
+.ladder__view { position: relative; margin-inline: calc(-1 * var(--gutter-l)) calc(-1 * var(--gutter-r)); }
+/* The overview strip above the ladder stands in for the scrollbar, so the native one is hidden. */
+.ladder__scroll { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; padding-bottom: var(--s3); padding-inline: var(--gutter-l) var(--gutter-r); cursor: grab; }
+.ladder__scroll::-webkit-scrollbar { display: none; }
 .ladder__scroll[data-drag="1"] { cursor: grabbing; }
+/* more to see: the edges fade out and an arrow sits in the fade */
+.ladder__fade { position: absolute; top: 0; bottom: 0; width: clamp(48px, 9vw, 116px); pointer-events: none; opacity: 0; transition: opacity 220ms ease; }
+.ladder__fade--l { left: 0; background: linear-gradient(to right, var(--paper) 18%, transparent); }
+.ladder__fade--r { right: 0; background: linear-gradient(to left, var(--paper) 18%, transparent); }
+.ladder[data-l="1"] .ladder__fade--l, .ladder[data-r="1"] .ladder__fade--r { opacity: 1; }
+.ladder__arrow {
+  position: absolute; top: calc(50% - 22px); width: 44px; height: 44px; border-radius: 50%; border: 0; padding: 0;
+  display: grid; place-items: center; background: var(--ink); color: var(--paper); box-shadow: 0 2px 12px rgb(0 0 0 / 0.22);
+  opacity: 0; pointer-events: none; transition: opacity 220ms ease, transform 140ms var(--ease-out);
+}
+.ladder__arrow svg { width: 18px; height: 18px; }
+.ladder__arrow--l { left: max(8px, calc(var(--gutter-l) - 22px)); }
+.ladder__arrow--r { right: max(8px, calc(var(--gutter-r) - 22px)); }
+.ladder[data-l="1"] .ladder__arrow--l, .ladder[data-r="1"] .ladder__arrow--r { opacity: 1; pointer-events: auto; }
+.ladder__arrow:active { transform: scale(0.94); }
+.ladder__arrow:focus-visible { border-radius: 50%; }
+@media (hover: hover) and (pointer: fine) { .ladder__arrow:hover { transform: scale(1.07); } .ladder__arrow:hover:active { transform: scale(0.96); } }
+/* overview: every source as a dot on the whole ruler, with a frame around what is on screen */
+.ladder__map { position: relative; height: 46px; margin-bottom: var(--s5); cursor: pointer; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.ladder__map::before { content: ""; position: absolute; left: 0; right: 0; top: 14px; height: 1px; background: var(--rule); }
+.ladder__tick { position: absolute; top: 14px; width: 1px; height: 6px; background: var(--ink-3); }
+.ladder__tl { position: absolute; top: 28px; transform: translateX(-50%); white-space: nowrap; }
+.ladder__dot { position: absolute; top: 11px; width: 7px; height: 7px; margin-left: -3.5px; border-radius: 50%; background: var(--supply); box-shadow: 0 0 0 1.5px var(--paper); }
+.ladder__win { position: absolute; top: 0; height: 29px; min-width: 16px; box-sizing: border-box; border: 1.5px solid var(--ink); border-radius: 4px; background: color-mix(in srgb, var(--ink) 9%, transparent); cursor: grab; }
+.ladder__map[data-drag="1"], .ladder__map[data-drag="1"] .ladder__win { cursor: grabbing; }
 .ladder__rail { position: relative; height: 430px; }
 .rung { position: absolute; display: grid; gap: 5px; justify-items: center; text-align: center; align-content: end; background: var(--paper); padding-top: 4px; }
 .rung__art { width: 100%; color: var(--ink); display: grid; place-items: end center; }
@@ -517,6 +546,51 @@ table.data thead th {
 
 .note { font-size: 12px; color: var(--ink-3); max-width: 80ch; margin-top: var(--s3); line-height: 1.45; }
 .empty { padding: var(--s6) 0; color: var(--ink-3); font-size: var(--t-small); }
+/* ---------- topic pages (reactors/, mines/, balance/, price/, facts/): the same data as plain tables ---------- */
+a.btn { text-decoration: none; }
+.nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--ink); }
+.subnav { display: flex; gap: var(--s2); overflow-x: auto; scrollbar-width: none; padding-top: var(--s4); margin-inline: calc(-1 * var(--gutter-l)) calc(-1 * var(--gutter-r)); padding-inline: var(--gutter-l) var(--gutter-r); }
+.subnav::-webkit-scrollbar { display: none; }
+.subnav a {
+  flex: none; display: inline-flex; align-items: center; min-height: 34px; padding: 7px 10px; border: 1px solid var(--rule); border-radius: 3px; background: var(--paper-2);
+  font-family: var(--f-mono); font-variation-settings: "wdth" 87.5; font-size: var(--t-micro); letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; color: var(--ink-2);
+}
+.subnav a[aria-current="page"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+@media (min-width: 1080px) { .subnav { display: none; } }
+.doc { padding-bottom: var(--s8); }
+.doc__head { display: grid; gap: var(--s4); padding-block: var(--s7) var(--s6); }
+.doc__head h1 { font-size: var(--t-h2); line-height: 1.02; font-weight: 640; letter-spacing: -0.02em; font-variation-settings: "wdth" 108; text-wrap: balance; max-width: 18ch; }
+.doc__go { margin-top: var(--s2); }
+.doc__sec { padding-top: var(--s7); }
+.doc__sec h2 { font-size: clamp(1.3rem, 1vw + 1rem, 1.75rem); line-height: 1.1; font-weight: 620; letter-spacing: -0.01em; font-variation-settings: "wdth" 104; margin-bottom: var(--s4); }
+.doc .note a, .doc__list a { color: inherit; }
+.tablewrap { overflow-x: auto; border: 1px solid var(--rule); background: var(--paper-2); }
+.tablewrap table.data caption { caption-side: top; text-align: left; padding: 10px 10px 9px; font-size: var(--t-small); font-weight: 560; color: var(--ink); border-bottom: 1px solid var(--rule); }
+table.data tbody th { font-weight: 500; }
+table.data tfoot th, table.data tfoot td { font-weight: 640; border-top: 1px solid var(--ink); border-bottom: 0; }
+table.data .w { white-space: normal; min-width: 15ch; max-width: 34ch; }
+table.data td small { color: var(--ink-3); margin-left: 4px; }
+.more { border-top: 1px solid var(--rule); }
+.more:last-of-type { border-bottom: 1px solid var(--rule); }
+.more > summary { display: flex; align-items: center; gap: var(--s3); padding: var(--s4) 0; cursor: pointer; font-weight: 560; list-style: none; }
+.more > summary::-webkit-details-marker { display: none; }
+.more > summary::before { content: "+"; width: 1em; font-family: var(--f-mono); color: var(--ink-3); }
+.more[open] > summary::before { content: "\2212"; }
+.more > .tablewrap { margin-bottom: var(--s5); }
+.doc__list { margin: 0; padding-left: 1.15em; display: grid; gap: var(--s3); max-width: 78ch; color: var(--ink-2); line-height: 1.5; }
+.doc__facts { list-style: none; padding-left: 0; gap: 0; max-width: 88ch; }
+.doc__facts li { padding: var(--s4) 0; border-top: 1px solid var(--rule-2); color: var(--ink); }
+.doc__facts b { color: var(--ink); font-weight: 640; margin-right: 6px; }
+.doc__detail { color: var(--ink-3); }
+.doc__facts a { font-family: var(--f-mono); font-variation-settings: "wdth" 87.5; font-size: var(--t-micro); color: var(--ink-3); white-space: nowrap; }
+.foot__pages { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s2) var(--s4); }
+.foot__pages a { color: var(--ink); }
+
+/* shown only without JavaScript: the month's numbers in words */
+.digest { padding-block: var(--s7); max-width: 78ch; }
+.digest h2 { margin-bottom: var(--s4); }
+.digest ul { margin: var(--s4) 0; padding-left: 1.2em; display: grid; gap: var(--s2); }
+.digest a { text-decoration: underline; }
 
 /* entrance: one orchestrated moment on the plate; everything is visible without it */
 @media (prefers-reduced-motion: no-preference) {

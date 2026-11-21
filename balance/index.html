@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Uranium supply and demand to 2040 · Uranograph</title>
+<meta name="description" content="Reactor uranium need against modelled mine output and secondary supply, year by year from 2026 to 2040, with the assumptions stated.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://uranograph.com/balance/">
+<meta property="og:site_name" content="Uranograph">
+<meta property="og:title" content="Uranium supply and demand to 2040">
+<meta property="og:description" content="Reactor uranium need against modelled mine output and secondary supply, year by year from 2026 to 2040, with the assumptions stated.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://uranograph.com/balance/">
+<meta property="og:image" content="https://uranograph.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Uranium supply and demand to 2040">
+<meta name="twitter:description" content="Reactor uranium need against modelled mine output and secondary supply, year by year from 2026 to 2040, with the assumptions stated.">
+<meta name="twitter:image" content="https://uranograph.com/og.jpg">
+<meta name="theme-color" content="#0B0E0A">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"Dataset","name":"Uranium supply and demand to 2040, November 2026","description":"Reactor uranium need against modelled mine output and secondary supply, year by year from 2026 to 2040, with the assumptions stated.","url":"https://uranograph.com/balance/","isAccessibleForFree":true,"dateModified":"2026-11-20","creator":{"@type":"Organization","name":"Uranograph","url":"https://uranograph.com/"},"license":"https://uranograph.com/DATA-LICENSES.md","keywords":["uranium supply and demand","uranium deficit","uranium market balance","uranium requirements"],"distribution":[{"@type":"DataDownload","name":"reactors","description":"Every power reactor unit: name, country, coordinates, status, type, net MWe, grid-connection and shutdown years, and modelled annual uranium need (req, tU).","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/reactors.json","license":"https://opendatacommons.org/licenses/odbl/1-0/"},{"@type":"DataDownload","name":"mines","description":"Every uranium mine and project: owners, method, status, coordinates, production by year (tU), capacity, planned start, ramp and planned output.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/mines.json"},{"@type":"DataDownload","name":"secondary supply","description":"Assumed secondary supply (tU) by year.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/secondary_supply.json"},{"@type":"DataDownload","name":"outlook","description":"Published outlooks: Red Book production scenarios, World Nuclear Association 2040 demand scenarios, US utility uncovered requirements, inventories and origins of US purchases.","encodingFormat":"application/json","contentUrl":"https://uranograph.com/data/outlook.json"}],"isPartOf":{"@type":"WebSite","name":"Uranograph","url":"https://uranograph.com/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Uranograph","item":"https://uranograph.com/"},{"@type":"ListItem","position":2,"name":"Uranium supply and demand to 2040","item":"https://uranograph.com/balance/"}]}]</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230B0E0A'/%3E%3Cpath d='M9 7v11a7 7 0 0 0 14 0V7' fill='none' stroke='%23FFC21A' stroke-width='3.5' stroke-linecap='square'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Doto:wght@100..900&family=Martian+Mono:wdth,wght@75..112.5,100..800&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap">
+<link rel="stylesheet" href="../css/app.css">
+<script>(function(){try{var t=localStorage.getItem('u.theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}})()</script>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap mast__row">
+    <a class="brand" href="../">
+      <span class="brand__mark">Uranograph</span>
+      <span class="brand__issue label">No. 01 · Nov 2026</span>
+    </a>
+    <nav class="nav" aria-label="Data pages">
+      <a href="../reactors/">Reactors</a>
+      <a href="../mines/">Mines</a>
+      <a href="../balance/" aria-current="page">Balance</a>
+      <a href="../price/">Price</a>
+      <a href="../facts/">Facts</a>
+      <a href="../">Atlas</a>
+    </nav>
+    <div class="mast__tools">
+      <button class="btn" type="button" id="theme-toggle" aria-label="Switch between light and dark">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<article class="wrap doc">
+  <nav class="subnav" aria-label="Data pages">
+      <a href="../reactors/">Reactors</a>
+      <a href="../mines/">Mines</a>
+      <a href="../balance/" aria-current="page">Balance</a>
+      <a href="../price/">Price</a>
+      <a href="../facts/">Facts</a>
+      <a href="../">Atlas</a>
+  </nav>
+  <header class="doc__head">
+    <p class="label">No. 01 · Nov 2026 · as of 20 November 2026</p>
+    <h1>Uranium supply and demand to 2040</h1>
+    <p class="lede">Reactors need about 179 million lb U₃O₈ (68,988 tU) in 2026, and mines are modelled to produce 188 million lb U₃O₈ (72,444 tU). The tables follow both to 2040, first on the owners' own schedules, then with new mines late and short.</p>
+    <p class="doc__go"><a class="btn" href="../#balance">Open the interactive figure</a></p>
+  </header>
+  <div class="stats">
+    <div class="stat"><div class="stat__v">179<small>Mlb U₃O₈</small></div><div class="stat__l">reactor need in 2026</div><div class="stat__d">68,988 tU</div></div>
+    <div class="stat"><div class="stat__v">188<small>Mlb U₃O₈</small></div><div class="stat__l">modelled mine output in 2026</div><div class="stat__d">72,444 tU</div></div>
+    <div class="stat"><div class="stat__v">11<small>Mlb U₃O₈</small></div><div class="stat__l">assumed secondary supply in 2026</div><div class="stat__d">4,100 tU</div></div>
+    <div class="stat"><div class="stat__v">233<small>Mlb U₃O₈</small></div><div class="stat__l">reactor need in 2040</div><div class="stat__d">89,761 tU</div></div>
+  </div>
+  <section class="doc__sec">
+    <h2>Year by year</h2>
+<div class="tablewrap" tabindex="0" role="region" aria-label="Reactor uranium need against modelled supply, 2026–2040, tU">
+<table class="data">
+<caption>Reactor uranium need against modelled supply, 2026–2040, tU</caption>
+<thead><tr><th scope="col">Year</th><th scope="col">Reactor need</th><th scope="col">Operating mines</th><th scope="col">Restarts</th><th scope="col">New mines</th><th scope="col">All mines</th><th scope="col">Secondary supply</th><th scope="col">Total supply</th><th scope="col">Supply less need</th><th scope="col">Need, Mlb U₃O₈</th><th scope="col">Total supply, Mlb U₃O₈</th></tr></thead>
+<tbody>
+<tr><th scope="row">2026</th><td>68,988</td><td>72,080</td><td>103</td><td>262</td><td>72,444</td><td>4,100</td><td>76,544</td><td>+7,556</td><td>179</td><td>199</td></tr>
+<tr><th scope="row">2027</th><td>71,638</td><td>74,505</td><td>263</td><td>623</td><td>75,391</td><td>4,200</td><td>79,591</td><td>+7,953</td><td>186</td><td>207</td></tr>
+<tr><th scope="row">2028</th><td>73,696</td><td>76,038</td><td>423</td><td>4,939</td><td>81,400</td><td>4,300</td><td>85,700</td><td>+12,003</td><td>192</td><td>223</td></tr>
+<tr><th scope="row">2029</th><td>77,541</td><td>76,545</td><td>463</td><td>7,643</td><td>84,650</td><td>4,400</td><td>89,050</td><td>+11,509</td><td>202</td><td>232</td></tr>
+<tr><th scope="row">2030</th><td>78,386</td><td>74,658</td><td>585</td><td>15,835</td><td>91,077</td><td>4,500</td><td>95,577</td><td>+17,191</td><td>204</td><td>248</td></tr>
+<tr><th scope="row">2031</th><td>84,022</td><td>74,658</td><td>706</td><td>26,418</td><td>101,781</td><td>4,600</td><td>106,381</td><td>+22,359</td><td>218</td><td>277</td></tr>
+<tr><th scope="row">2032</th><td>86,114</td><td>73,803</td><td>1,323</td><td>30,461</td><td>105,586</td><td>4,700</td><td>110,286</td><td>+24,172</td><td>224</td><td>287</td></tr>
+<tr><th scope="row">2033</th><td>83,195</td><td>73,803</td><td>1,939</td><td>31,186</td><td>106,928</td><td>4,800</td><td>111,728</td><td>+28,533</td><td>216</td><td>290</td></tr>
+<tr><th scope="row">2034</th><td>86,920</td><td>72,014</td><td>2,976</td><td>31,186</td><td>106,176</td><td>4,900</td><td>111,076</td><td>+24,155</td><td>226</td><td>289</td></tr>
+<tr><th scope="row">2035</th><td>88,172</td><td>71,523</td><td>3,746</td><td>31,186</td><td>106,455</td><td>5,000</td><td>111,455</td><td>+23,283</td><td>229</td><td>290</td></tr>
+<tr><th scope="row">2036</th><td>89,373</td><td>69,795</td><td>3,746</td><td>31,186</td><td>104,727</td><td>5,100</td><td>109,827</td><td>+20,454</td><td>232</td><td>286</td></tr>
+<tr><th scope="row">2037</th><td>89,638</td><td>60,267</td><td>3,746</td><td>31,186</td><td>95,199</td><td>5,200</td><td>100,399</td><td>+10,761</td><td>233</td><td>261</td></tr>
+<tr><th scope="row">2038</th><td>90,706</td><td>60,267</td><td>3,746</td><td>31,186</td><td>95,199</td><td>5,300</td><td>100,499</td><td>+9,793</td><td>236</td><td>261</td></tr>
+<tr><th scope="row">2039</th><td>89,761</td><td>58,040</td><td>3,746</td><td>28,841</td><td>90,627</td><td>5,400</td><td>96,027</td><td>+6,266</td><td>233</td><td>250</td></tr>
+<tr><th scope="row">2040</th><td>89,761</td><td>54,326</td><td>3,746</td><td>28,841</td><td>86,913</td><td>5,500</td><td>92,413</td><td>+2,652</td><td>233</td><td>240</td></tr>
+</tbody>
+</table>
+</div>
+    <p class="note">Tonnes of uranium (tU) unless a column says otherwise. One million lb U₃O₈ is about 385 tU.</p>
+  </section>
+  <section class="doc__sec">
+    <h2>If new supply is late or short</h2>
+<div class="tablewrap" tabindex="0" role="region" aria-label="Total supply less reactor need under three delivery cases, 2026–2040, tU">
+<table class="data">
+<caption>Total supply less reactor need under three delivery cases, 2026–2040, tU</caption>
+<thead><tr><th scope="col">Year</th><th scope="col">Reactor need</th><th scope="col">Supply, on owners’ dates, all of plan</th><th scope="col">Less need</th><th scope="col">Supply, 2 years late, three quarters of plan</th><th scope="col">Less need</th><th scope="col">Supply, 3 years late, half of plan</th><th scope="col">Less need</th></tr></thead>
+<tbody>
+<tr><th scope="row">2026</th><td>68,988</td><td>76,544</td><td>+7,556</td><td>75,223</td><td>+6,235</td><td>74,267</td><td>+5,279</td></tr>
+<tr><th scope="row">2027</th><td>71,638</td><td>79,591</td><td>+7,953</td><td>77,142</td><td>+5,504</td><td>75,580</td><td>+3,941</td></tr>
+<tr><th scope="row">2028</th><td>73,696</td><td>85,700</td><td>+12,003</td><td>78,665</td><td>+4,969</td><td>76,446</td><td>+2,750</td></tr>
+<tr><th scope="row">2029</th><td>77,541</td><td>89,050</td><td>+11,509</td><td>79,400</td><td>+1,859</td><td>76,709</td><td>−832</td></tr>
+<tr><th scope="row">2030</th><td>78,386</td><td>95,577</td><td>+17,191</td><td>80,730</td><td>+2,344</td><td>74,704</td><td>−3,683</td></tr>
+<tr><th scope="row">2031</th><td>84,022</td><td>106,381</td><td>+22,359</td><td>82,888</td><td>−1,134</td><td>77,041</td><td>−6,981</td></tr>
+<tr><th scope="row">2032</th><td>86,114</td><td>110,286</td><td>+24,172</td><td>88,369</td><td>+2,255</td><td>77,658</td><td>−8,456</td></tr>
+<tr><th scope="row">2033</th><td>83,195</td><td>111,728</td><td>+28,533</td><td>96,497</td><td>+13,301</td><td>81,915</td><td>−1,280</td></tr>
+<tr><th scope="row">2034</th><td>86,920</td><td>111,076</td><td>+24,155</td><td>98,303</td><td>+11,382</td><td>85,578</td><td>−1,342</td></tr>
+<tr><th scope="row">2035</th><td>88,172</td><td>111,455</td><td>+23,283</td><td>98,919</td><td>+10,746</td><td>87,518</td><td>−655</td></tr>
+<tr><th scope="row">2036</th><td>89,373</td><td>109,827</td><td>+20,454</td><td>98,289</td><td>+8,916</td><td>87,003</td><td>−2,370</td></tr>
+<tr><th scope="row">2037</th><td>89,638</td><td>100,399</td><td>+10,761</td><td>89,438</td><td>−199</td><td>78,093</td><td>−11,545</td></tr>
+<tr><th scope="row">2038</th><td>90,706</td><td>100,499</td><td>+9,793</td><td>89,538</td><td>−1,167</td><td>78,578</td><td>−12,128</td></tr>
+<tr><th scope="row">2039</th><td>89,761</td><td>96,027</td><td>+6,266</td><td>85,653</td><td>−4,108</td><td>75,279</td><td>−14,482</td></tr>
+<tr><th scope="row">2040</th><td>89,761</td><td>92,413</td><td>+2,652</td><td>82,039</td><td>−7,722</td><td>71,665</td><td>−18,096</td></tr>
+</tbody>
+</table>
+</div>
+    <p class="note">The three cases are settings on the interactive figure, applied to restarts and new mines. They are tests of the schedule, not forecasts. Secondary supply is counted in all three.</p>
+  </section>
+  <section class="doc__sec">
+    <h2>What the tables assume</h2>
+    <ul class="doc__list">
+      <li>Reactor need counts running units, units under construction and planned units on their stated dates. A first core is booked the year before a unit connects.</li>
+      <li>Operating mines follow reported production, then guidance or last output. This column includes mines that are not listed one by one.</li>
+      <li>In the first table, restarts and new mines arrive on their owners' dates and deliver their full plan. That is the most favourable case. The second table delays them and cuts what they deliver.</li>
+      <li>Proposed mines are left out.</li>
+      <li>Secondary supply (inventories, underfeeding, recycling) is an assumption, not a measurement.</li>
+      <li>Nothing here is a price forecast.</li>
+    </ul>
+  </section>
+  <section class="doc__sec">
+    <h2>A published outlook for 2040</h2>
+<div class="tablewrap" tabindex="0" role="region" aria-label="World Nuclear Association reactor requirement scenarios for 2040, beside this model">
+<table class="data">
+<caption>World Nuclear Association reactor requirement scenarios for 2040, beside this model</caption>
+<thead><tr><th scope="col">Scenario</th><th scope="col">tU</th><th scope="col">Mlb U₃O₈</th></tr></thead>
+<tbody>
+<tr><th scope="row">Lower</th><td>107,000</td><td>278</td></tr>
+<tr><th scope="row">Reference</th><td>150,000</td><td>390</td></tr>
+<tr><th scope="row">Upper</th><td>204,000</td><td>530</td></tr>
+<tr><th scope="row">This model, firm and planned units</th><td>89,761</td><td>233</td></tr>
+</tbody>
+</table>
+</div>
+    <p class="note">Scenarios from the <a href="https://world-nuclear.org/news-and-media/press-statements/world-nuclear-fuel-report-2025-investment-in-nuclear-fuel-cycle-needed-as-demand-for-nuclear-power-grows" rel="noopener">WNA Fuel Report 2025</a>.</p>
+  </section>
+</article>
+</main>
+
+<footer class="wrap foot">
+  <div>
+    <span class="brand__mark">Uranograph</span>
+    <p class="label" style="margin-top:8px">No. 01 · Nov 2026 · as of 20 November 2026</p>
+  </div>
+  <div>
+    <p>A free, independent atlas of the uranium market, redrawn every month. It reports data and shows its sources. It is not investment advice and makes no price forecast.</p>
+  </div>
+  <nav class="foot__pages" aria-label="Data pages">
+    <span class="label">Data pages</span>
+    <a href="../reactors/">Reactors</a> <a href="../mines/">Mines</a> <a href="../balance/">Balance</a> <a href="../price/">Price</a> <a href="../facts/">Facts</a>
+    <a href="../">Interactive atlas</a> <a href="../llms.txt">llms.txt</a> <a href="../DATA-LICENSES.md">Licences</a>
+  </nav>
+</footer>
+<script>(function(){var b=document.getElementById('theme-toggle');if(!b)return;b.addEventListener('click',function(){var r=document.documentElement,c=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'),n=c==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('u.theme',n)}catch(e){}})})()</script>
+</body>
+</html>

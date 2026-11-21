@@ -21,7 +21,7 @@
       lon: 58, lat: 26, vlon: 0, vlat: 0,
       year: M.nowYear, playing: false,
       w: 0, h: 0, dpr: 1, R: 0, cx: 0, cy: 0,
-      hover: null, pinned: null, dragging: false, touched: false, visible: true,
+      hover: null, pinned: null, dragging: false, touched: false, visible: true, over: false,
       auto: !U.reducedMotion(), tween: null, dirty: true,
     };
 
@@ -252,7 +252,8 @@
     }
 
     /* ----- loop ----- */
-    let raf = 0, lastT = 0, idleSince = 0;
+    let raf = 0, lastT = 0, idleSince = 0, holdUntil = 0, wake = 0, regionHeld = false;
+    const IDLE_MS = 1400, SPIN = 0.003; // degrees per millisecond: one turn in two minutes
     function kick() { if (!raf && S.visible) raf = requestAnimationFrame(frame); }
     function frame(t) {
       raf = 0;
@@ -272,9 +273,15 @@
       } else if (!S.dragging) {
         if (Math.abs(S.vlon) > 0.002 || Math.abs(S.vlat) > 0.002) {
           S.lon += S.vlon * dt; S.lat = clampLat(S.lat + S.vlat * dt);
-          const f = Math.pow(0.94, dt / 16); S.vlon *= f; S.vlat *= f; again = true;
-        } else if (S.auto && !S.hover && !S.pinned && t - idleSince > 2500) {
-          S.lon += dt * 0.0035; again = true;
+          const f = Math.pow(0.94, dt / 16); S.vlon *= f; S.vlat *= f; again = true; idleSince = t;
+        } else if (S.auto && !S.over && !S.hover && !S.pinned) {
+          // Nobody is on the globe: after a short pause, ease into a slow eastward turn. While waiting, the
+          // loop sleeps on a timer instead of spinning frames.
+          const since = t - Math.max(idleSince, holdUntil) - IDLE_MS;
+          if (since > 0) {
+            S.lon -= dt * SPIN * Math.min(1, since / 1500); again = true;
+            if (regionHeld) { regionHeld = false; U.$$('#globe-regions button').forEach((x) => x.setAttribute('aria-pressed', 'false')); }
+          } else { clearTimeout(wake); wake = setTimeout(kick, 30 - since); }
         }
       }
       if (S.playing) again = true;
@@ -313,6 +320,7 @@
     const end = (e) => {
       if (!S.dragging) return;
       S.dragging = false; delete host.dataset.drag; idleSince = performance.now();
+      if (e.pointerType === 'touch') S.over = false; // a finger has no "leave" of its own
       if (last && last.moved < 6) { // a click or tap
         const r = canvas.getBoundingClientRect();
         const hit = pick(e.clientX - r.left, e.clientY - r.top);
@@ -323,7 +331,8 @@
     };
     host.addEventListener('pointerup', end);
     host.addEventListener('pointercancel', end);
-    host.addEventListener('pointerleave', () => { if (!S.dragging) { S.hover = null; U.tip.hide(); S.dirty = true; idleSince = performance.now(); kick(); } });
+    host.addEventListener('pointerenter', () => { S.over = true; });
+    host.addEventListener('pointerleave', () => { S.over = false; if (!S.dragging) { S.hover = null; U.tip.hide(); S.dirty = true; idleSince = performance.now(); kick(); } });
     host.addEventListener('keydown', (e) => {
       const step = e.shiftKey ? 20 : 6;
       if (e.key === 'ArrowLeft') S.lon -= step; else if (e.key === 'ArrowRight') S.lon += step;
@@ -434,7 +443,8 @@
       let dlon = (+b.dataset.lon - S.lon) % 360; if (dlon > 180) dlon -= 360; if (dlon < -180) dlon += 360;
       const dur = U.reducedMotion() ? 1 : 900;
       S.tween = { t0: performance.now(), dur, lon0: S.lon, lat0: S.lat, dlon, dlat: +b.dataset.lat - S.lat };
-      S.vlon = S.vlat = 0; S.auto = false; touched(); kick();
+      // hold the chosen view for a while, then let the slow turn resume
+      S.vlon = S.vlat = 0; regionHeld = true; holdUntil = performance.now() + 20000; touched(); kick();
     }));
 
     // decade ticks under the scrubber
@@ -492,7 +502,7 @@
       if (it.total < 1 && S.year !== M.nowYear) { yearInput.value = M.nowYear; setYear(M.nowYear, true); drawSpark(); }
       let dlon = (it.lon - S.lon) % 360; if (dlon > 180) dlon -= 360; if (dlon < -180) dlon += 360;
       S.tween = { t0: performance.now(), dur: U.reducedMotion() ? 1 : 900, lon0: S.lon, lat0: S.lat, dlon, dlat: clampLat(it.lat * 0.8) - S.lat };
-      S.vlon = S.vlat = 0; S.auto = false; touched(); pin(it); kick();
+      S.vlon = S.vlat = 0; touched(); pin(it); kick(); // the pinned item pauses the slow turn by itself
       return true;
     };
   }

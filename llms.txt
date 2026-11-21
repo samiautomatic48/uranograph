@@ -1,0 +1,55 @@
+# Uranograph
+
+> A free monthly atlas of the uranium market: every power reactor and every uranium mine, the balance between supply and demand to 2040, prices, fund holdings, news and filings. Issue 1, data as of 20 November 2026. The interactive atlas is at https://uranograph.com/. The same data is published as plain HTML tables on the pages below and as JSON files, all free to read.
+
+Units: tU is tonnes of uranium metal. One tU is 2599.8 lb of U3O8, so 1 million lb U3O8 is about 385 tU. Prices are US dollars per lb U3O8.
+
+## Key numbers, November 2026
+
+- In 2026, the world's 417 running power reactors (381 GWe) need about 179 million lb U3O8 (68,988 tU) a year, counting first cores for units about to start.
+- Uranium mines are modelled to produce about 188 million lb U3O8 (72,444 tU) in 2026, which covers 105% of that need before secondary supply.
+- 82 reactors are under construction and 130 more are planned. The largest fleets in operation are in United States (94), China (65), France (57), Russia (34) and South Korea (24). Most construction is in China (41), India (8) and Russia (7).
+- In 2025, mines produced 175 million lb U3O8 (67,223 tU). The largest producing countries were Kazakhstan (38%), Canada (20%), Namibia (13%) and Uzbekistan (10%).
+- The largest mines by 2025 output were Cigar Lake, Canada (7,347 tU), Navoiyuran, Uzbekistan (7,000 tU), McArthur River / Key Lake, Canada (5,808 tU), Husab, Namibia (4,605 tU) and KATCO, Kazakhstan (3,714 tU).
+- The atlas tracks 146 mines and projects, 59 of them producing or ramping up, and 877 reactor units from 1956 to 2040.
+- The industry month-end spot price for October 2026 was $91.55 per lb U3O8 and the long-term price was $98.00 (as published by Cameco). The IMF monthly average for October 2026 was $72.89.
+- Counting reactors under construction and planned, reactor need reaches about 229 million lb U3O8 (88,172 tU) in 2035. If every restart and new mine arrived on its owner's schedule and delivered its full plan, mine output that year would be about 277 million lb U3O8 (106,455 tU), not counting proposed mines. The page lets you test late and partial delivery. Nothing on the site is a price forecast.
+
+## Pages
+
+- [Reactors](https://uranograph.com/reactors/): Reactors by country, every unit under construction, and every running and planned unit, as plain tables.
+- [Mines](https://uranograph.com/mines/): Mine production by country and every uranium mine and project with owner, status, output and planned start.
+- [Balance](https://uranograph.com/balance/): Reactor need against modelled mine output and secondary supply, year by year to the model horizon.
+- [Price](https://uranograph.com/price/): The latest cited spot and long-term price, the IMF monthly series, US delivered prices, and conversion and enrichment.
+- [Facts](https://uranograph.com/facts/): Sourced facts about uranium and the fuel cycle, and nuclear power sources from smallest to largest.
+
+## How the numbers are made
+
+- Reactor demand is counted unit by unit: net capacity, a capacity factor and a factor for the reactor family give an annual uranium need, and each country is then scaled to its published requirement. A first core is booked the year before grid connection.
+- Mine supply is counted mine by mine: reported production where it exists, guidance or last output for operating mines, and start year, ramp and planned output for restarts and new mines. Proposed mines are left out unless stated.
+- Secondary supply (inventories, underfeeding, recycling) is shown separately and is an assumption, not a measurement.
+- The site reports data. It does not forecast prices and is not investment advice.
+
+## Data
+
+- [reactors](https://uranograph.com/data/reactors.json): Every power reactor unit: name, country, coordinates, status, type, net MWe, grid-connection and shutdown years, and modelled annual uranium need (req, tU).
+- [mines](https://uranograph.com/data/mines.json): Every uranium mine and project: owners, method, status, coordinates, production by year (tU), capacity, planned start, ramp and planned output.
+- [production by country](https://uranograph.com/data/production_by_country.json): Mine production by country and year, 2007 onward (tU). OECD-NEA/IAEA Red Book, CC BY 4.0, plus the latest year summed from listed mines.
+- [prices](https://uranograph.com/data/prices.json): Uranium price series: IMF monthly average and EIA annual delivered price (USD per lb U3O8), the latest cited spot and long-term prices, and conversion and enrichment prices.
+- [outlook](https://uranograph.com/data/outlook.json): Published outlooks: Red Book production scenarios, World Nuclear Association 2040 demand scenarios, US utility uncovered requirements, inventories and origins of US purchases.
+- [contracting](https://uranograph.com/data/contracting.json): US and EU utility contracting: newly contracted volumes against uranium loaded, by year.
+- [mining costs](https://uranograph.com/data/mining_costs.json): Cost of producing a pound: Kazatomprom and Cameco cash and all-in costs by year.
+- [funds](https://uranograph.com/data/funds.json): Physical uranium funds and ETFs: pounds held by Sprott Physical Uranium Trust and Yellow Cake, and ETF assets.
+- [secondary supply](https://uranograph.com/data/secondary_supply.json): Assumed secondary supply (tU) by year.
+- [events](https://uranograph.com/data/events.json): Dated market events shown on the price chart.
+- [companies](https://uranograph.com/data/companies.json): Listed uranium and nuclear-fuel companies: tickers, role in the fuel chain, filing venues.
+- [filings](https://uranograph.com/data/filings.json): Recent regulatory filings by those companies, with links.
+- [news](https://uranograph.com/data/news.json): The month's news: headline, source, date, link and a one-line summary.
+- [scale](https://uranograph.com/data/scale.json): Nuclear power sources from microwatt batteries to the largest plants (watts).
+- [facts](https://uranograph.com/data/facts.json): Sourced facts about uranium and the fuel cycle.
+- [sources](https://uranograph.com/data/sources.json): Every source used, what it was used for, and its reuse terms.
+
+## Reuse
+
+- [Data credits and licences](https://uranograph.com/DATA-LICENSES.md): the terms for each file. The reactor dataset is under the Open Database License. Red Book figures are CC BY 4.0. The IMF price series is for non-commercial use with attribution.
+- When citing a number, name Uranograph, the issue month and the underlying source given on the page.

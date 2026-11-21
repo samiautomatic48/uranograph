@@ -108,7 +108,55 @@
     scroll.addEventListener('pointermove', (e) => { if (drag) { scroll.scrollLeft = drag.left - (e.clientX - drag.x); U.tip.hide(); } });
     const end = () => { drag = null; delete scroll.dataset.drag; };
     scroll.addEventListener('pointerup', end); scroll.addEventListener('pointercancel', end);
-    scroll.addEventListener('scroll', () => U.tip.hide(), { passive: true });
+
+    // Make the sideways scroll obvious: an overview strip with a frame around what is on screen, edges that
+    // fade where there is more, and an arrow in each fade.
+    const fig = scroll.closest('.ladder'), map = U.$('#ladder-map'), prevB = U.$('#ladder-prev'), nextB = U.$('#ladder-next');
+    const marks = []; let win = null;
+    if (map) {
+      U.clear(map);
+      for (let e = lo; e <= hi; e++) {
+        if (((e % 3) + 3) % 3 !== 0) continue;
+        const x = xOf(Math.pow(10, e));
+        marks.push({ x, node: map.appendChild(U.el('span', { class: 'ladder__tick' })) });
+        marks.push({ x, node: map.appendChild(U.el('span', { class: 'ladder__tl label', text: U.power(Math.pow(10, e)) })) });
+      }
+      rungs.forEach((r) => marks.push({ x: r.cx, node: map.appendChild(U.el('span', { class: 'ladder__dot' })) }));
+      win = map.appendChild(U.el('div', { class: 'ladder__win' }));
+    }
+    const setArrow = (b, on) => { if (!b) return; if (!on && document.activeElement === b) scroll.focus({ preventScroll: true }); b.disabled = !on; };
+    function sync() {
+      const sw = scroll.scrollWidth || 1, cw = scroll.clientWidth, x = scroll.scrollLeft, more = { l: x > 4, r: x < sw - cw - 4 };
+      if (win) { win.style.left = ((x / sw) * 100).toFixed(3) + '%'; win.style.width = (Math.min(1, cw / sw) * 100).toFixed(3) + '%'; }
+      if (fig) { fig.dataset.l = more.l ? '1' : '0'; fig.dataset.r = more.r ? '1' : '0'; }
+      setArrow(prevB, more.l); setArrow(nextB, more.r);
+    }
+    function layout() {
+      const padL = parseFloat(getComputedStyle(scroll).paddingLeft) || 0, sw = scroll.scrollWidth || 1;
+      marks.forEach((m) => { m.node.style.left = (((padL + m.x) / sw) * 100).toFixed(3) + '%'; });
+      sync();
+    }
+    let ticking = false;
+    scroll.addEventListener('scroll', () => { U.tip.hide(); if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; sync(); }); } }, { passive: true });
+    const step = (dir) => scroll.scrollBy({ left: dir * Math.max(260, scroll.clientWidth * 0.7), behavior: U.reducedMotion() ? 'auto' : 'smooth' });
+    if (prevB) prevB.addEventListener('click', () => step(-1));
+    if (nextB) nextB.addEventListener('click', () => step(1));
+    if (map) {
+      let grab = null;
+      const frac = (e) => { const b = map.getBoundingClientRect(); return (e.clientX - b.left) / (b.width || 1); };
+      map.addEventListener('pointerdown', (e) => {
+        const sw = scroll.scrollWidth || 1, f = frac(e), l = scroll.scrollLeft / sw, w = scroll.clientWidth / sw;
+        grab = f >= l && f <= l + w ? f - l : w / 2; // take the frame where it was grabbed, or centre it on the click
+        scroll.scrollLeft = (f - grab) * sw; map.dataset.drag = '1';
+        try { map.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+        e.preventDefault();
+      });
+      map.addEventListener('pointermove', (e) => { if (grab != null) scroll.scrollLeft = (frac(e) - grab) * (scroll.scrollWidth || 1); });
+      const drop = () => { grab = null; map.removeAttribute('data-drag'); };
+      map.addEventListener('pointerup', drop); map.addEventListener('pointercancel', drop);
+    }
+    if (window.ResizeObserver) new ResizeObserver(layout).observe(scroll); else window.addEventListener('resize', layout);
+    layout();
 
     U.table(U.$('#scale-table'), [
       { k: 'name', t: 'Source', l: true }, { k: 'year', t: 'Year', f: (v) => v || '–' },
