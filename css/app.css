@@ -583,6 +583,7 @@ table.data td small { color: var(--ink-3); margin-left: 4px; }
 .doc__facts b { color: var(--ink); font-weight: 640; margin-right: 6px; }
 .doc__detail { color: var(--ink-3); }
 .doc__facts a { font-family: var(--f-mono); font-variation-settings: "wdth" 87.5; font-size: var(--t-micro); color: var(--ink-3); white-space: nowrap; }
+.foot__contact { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s3); margin-top: var(--s4); color: var(--ink); }
 .foot__pages { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s2) var(--s4); }
 .foot__pages a { color: var(--ink); }
 

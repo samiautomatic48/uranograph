@@ -53,3 +53,4 @@ Units: tU is tonnes of uranium metal. One tU is 2599.8 lb of U3O8, so 1 million 
 
 - [Data credits and licences](https://uranograph.com/DATA-LICENSES.md): the terms for each file. The reactor dataset is under the Open Database License. Red Book figures are CC BY 4.0. The IMF price series is for non-commercial use with attribution.
 - When citing a number, name Uranograph, the issue month and the underlying source given on the page.
+- Corrections and questions: https://www.linkedin.com/in/samir-almokhamad/
